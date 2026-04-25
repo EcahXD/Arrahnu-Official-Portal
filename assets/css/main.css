@@ -98,18 +98,73 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
-	body {
-		background-color: #2a2209; 
-		background-image: 
-			/* This first layer is a dark tint to make white text readable */
-			linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%),
-			/* This is your actual Maroon-Red-Gold gradient */
-			linear-gradient(45deg, #2a2209 0%, #8B0000 50%, #D4AF37 100%), 
-			url("../../images/bg.jpg");
-		background-size: auto, cover;
-		background-attachment: fixed, fixed;
-		background-position: center, center;
-	}
+	/* Kod Asal Anda (Dikekalkan) */
+body {
+    background-color: #2a2209; 
+    background-image: 
+        linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%),
+        linear-gradient(45deg, #2a2209 0%, #8B0000 50%, #D4AF37 100%), 
+        url("../../images/bg.jpg");
+    background-size: auto, cover;
+    background-attachment: fixed, fixed;
+    background-position: center, center;
+    position: relative; /* Tambah ini supaya lapisan glitter stabil */
+}
+
+/* 1. LAPISAN GLITTER (Overlay) */
+body::before {
+    content: "";
+    position: fixed; /* Kekal di skrin walaupun scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* PENTING: Supaya butang/link di bawahnya masih boleh ditekan */
+    z-index: 0; 
+    
+    /* 2. TITIK-TITIK GLITTER (Pelbagai Saiz & Warna Emas/Putih) */
+    background-image: 
+        radial-gradient(2px 2px at 40px 60px, #D4AF37 50%, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff 50%, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 150px 120px, #cda72a 50%, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 30px 160px, #F1C40F 50%, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 180px 190px, #ffffff 50%, rgba(0,0,0,0)),
+        radial-gradient(2.5px 2.5px at 110px 220px, #D4AF37 50%, rgba(0,0,0,0));
+    
+    background-repeat: repeat;
+    
+    /* Saiz ruang untuk setiap titik berulang (parallax effect) */
+    background-size: 200px 250px, 150px 200px, 250px 300px, 180px 220px, 300px 350px, 220px 280px;
+
+    /* 3. EFEK FUDING DI ATAS (Masking)  - Hitam: Nampak  - Transparent: Hilang (Pudar pada 75% atau 3.5/4 skrin) */
+    -webkit-mask-image: linear-gradient(to top, black 0%, black 60%, transparent 80%);
+    mask-image: linear-gradient(to top, black 0%, black 60%, transparent 80%);
+
+    /* 4. ANIMASI BERGERAK KE ATAS */
+    animation: glitterMove 15s linear infinite;
+}
+
+/* 5. PERGERAKAN ANIMASI (Dari bawah ke atas) */
+@keyframes glitterMove {
+    from {
+        background-position: 
+            0 0, 
+            0 0, 
+            0 0, 
+            0 0, 
+            0 0, 
+            0 0;
+    }
+    to {
+        background-position: 
+            0 -250px, 
+            0 -200px, 
+            0 -300px, 
+            0 -220px, 
+            0 -350px, 
+            0 -280px; /* Nilai negatif paksi-Y membuatkannya bergerak naik */
+    }
+}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
@@ -2420,7 +2475,12 @@ input, select, textarea {
 		position: relative;
 	}
 
+		/* Pastikan bekas gambar mempunyai saiz tetap */
 		.image img {
+			width: 100%;       /* Memenuhi lebar kad */
+			height: 250px;     /* Set tinggi yang anda mahukan (contoh: 250px) */
+			object-fit: cover; /* MAGIK: Gambar akan di-crop secara automatik tanpa distortion */
+			object-position: center; /* Pastikan fokus gambar di tengah */
 			border-radius: 5px;
 			display: block;
 		}
