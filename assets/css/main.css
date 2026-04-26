@@ -3065,19 +3065,67 @@ body::before {
 		margin: 0 0 2em 0;
 	}
 
+		/* 1. KOD UTAMA KAD (Gradient & Layout) */
 		.features article {
-			padding: 1.75em 1.75em 0.1em 1.75em ;
-			background-color: #cda72a; 
+			padding: 1.75em 1.75em 0.1em 1.75em;
+			background-color: #2a2209; /* Warna asas gelap */
 			background-image: 
-				/* Layer 1: Stronger dark tint at the bottom for white text readability */
-			linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%),			
-			/* Layer 2: Dark Gold (#2a2209) to Bright Gold (#cda72a) */
-			/* We set the bright gold to start at 10%, making it cover 90% of the area */
-			linear-gradient(45deg, #2a2209 0%, #cda72a 10%, #cda72a 80%),
-				url("../../images/bg.jpg");
+				/* Layer 1: Dark tint untuk kebolehbacaan teks */
+				linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%),
+				/* Layer 2: Gradient Gelap (bawah) ke Gold (atas) */
+				linear-gradient(to top, #2a2209 0%, #cda72a 100%);
+			
 			border-radius: 5px;
-			margin: 1.5em 3em 1.5em 0;
+			margin: 1.5em 1.5em 1.5em 0; /* Kemaskan margin supaya seimbang */
 			width: calc(50% - 1.5em);
+			position: relative; /* Wajib ada untuk glitter duduk dalam kad */
+			overflow: hidden;   /* Supaya glitter tak terkeluar dari border-radius */
+			border: 1px solid rgba(212, 175, 55, 0.3); /* Border emas halus */
+		}
+
+		/* 2. LAPISAN GLITTER DALAM KAD */
+		.features article::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			z-index: 1;
+
+			/* Rekaan titik-titik glitter pelbagai saiz */
+			background-image: 
+				radial-gradient(1.5px 1.5px at 20px 30px, #ffffff 50%, rgba(0,0,0,0)),
+				radial-gradient(2px 2px at 50px 80px, #F1C40F 50%, rgba(0,0,0,0)),
+				radial-gradient(1px 1px at 80px 10px, #ffffff 50%, rgba(0,0,0,0)),
+				radial-gradient(2.5px 2.5px at 110px 45px, #cda72a 50%, rgba(0,0,0,0)),
+				radial-gradient(1.5px 1.5px at 150px 90px, #ffffff 50%, rgba(0,0,0,0));
+			
+			background-size: 120px 150px; /* Saiz pengulangan glitter lebih kecil untuk kad */
+			background-repeat: repeat;
+
+			/* EFEK PUDAR: Glitter hilang pada paras 3/4 (75%) kad */
+			-webkit-mask-image: linear-gradient(to top, black 0%, black 50%, transparent 75%);
+			mask-image: linear-gradient(to top, black 0%, black 50%, transparent 75%);
+
+			/* Animasi glitter bergerak perlahan ke atas */
+			animation: cardGlitter 10s linear infinite;
+			opacity: 0.6; /* Supaya glitter nampak lembut, tak mengganggu teks */
+		}
+
+		/* 3. ANIMASI GLITTER KHAS UNTUK KAD */
+		@keyframes cardGlitter {
+			from { background-position: 0 0; }
+			to { background-position: 0 -150px; }
+		}
+
+		/* 4. PASTIKAN TEKS DUDUK ATAS GLITTER */
+		.features article h3, 
+		.features article p, 
+		.features article .image {
+			position: relative;
+			z-index: 2; /* Supaya teks berada di depan glitter */
 		}
 
 			.features article:nth-child(2n) {
@@ -3868,17 +3916,21 @@ body::before {
 			}
 
 			.wrapper.spotlight .image {
-				border-radius: 100%;
+				border-radius: 50%; /* 50% adalah standard yang lebih tepat untuk bulatan */
 				margin: 0 3em 2em 0;
 				width: 22em;
+				aspect-ratio: 1 / 1; /* MAGIK 1: Paksa tinggi (height) sentiasa sama dengan lebar (width) */
 				overflow: hidden;
-				-ms-flex: 1;
+				flex-shrink: 0; /* MAGIK 2: Halang flexbox dari 'menyeksa' atau memenyetkan kotak ni di phone */
 			}
 
-				.wrapper.spotlight .image img {
-					border-radius: 100%;
-					width: 100%;
-				}
+			.wrapper.spotlight .image img {
+				width: 100%;
+				height: 100%; /* Wajib letak supaya gambar penuhi container */
+				object-fit: cover; /* MAGIK 3: Crop gambar automatik supaya tak lonjong/tertarik */
+				border-radius: 50%;
+				display: block; /* Buang ruang kosong (white-space) misteri kat bawah gambar */
+			}
 
 			.wrapper.spotlight .content {
 				width: 100%;
@@ -3898,19 +3950,19 @@ body::before {
 			}
 
 			.wrapper.spotlight.style2 {
-				background-color: #dcbd57;
+				background-color: #bb9e40;
 			}
 
 				.wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23dcbd57%3B' /%3E%3C/svg%3E");
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23bb9e40%3B' /%3E%3C/svg%3E");
 				}
 
 				.wrapper.spotlight.style2:before {
-					box-shadow: inset 0 -1px 0 0 #dcbd57, 0 1px 0 0 #dcbd57;
+					box-shadow: inset 0 -1px 0 0 #bb9e40, 0 1px 0 0 #bb9e40;
 				}
 
 				.wrapper.spotlight.style2:after {
-					box-shadow: inset 0 -1px 0 0 #dcbd57, 0 1px 0 0 #dcbd57;
+					box-shadow: inset 0 -1px 0 0 #bb9e40, 0 1px 0 0 #bb9e40;
 				}
 
 			.wrapper.spotlight.style3 {
