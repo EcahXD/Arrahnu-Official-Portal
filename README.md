@@ -27,8 +27,8 @@
 - **Tindakan:** Menetapkan bahawa lesen pembangunan perlu diubah daripada MIT kepada **Hak Milik Terpelihara (Proprietary)** untuk melindungi aset digital syarikat, sambil mengekalkan kredit asal kepada HTML5 UP.
 
 ### [24/04/2026] - Kelulusan Rasmi (CEO Approval)
-- **Aktiviti:** Pembentangan konsep akhir minggu pertama kepada CEO.
-- **Tindakan:** **CEO telah meluluskan (Approve)** pilihan template, skema warna baru, dan struktur lesen yang dicadangkan. Status: **Sedia untuk fasa pembangunan (Proceed Development).**
+- **Aktiviti:** Sesi semakan konsep dan maklum balas CEO Arrahnu.
+- **Tindakan:** CEO memberikan persetujuan (Approve) terhadap pemilihan template serta skema warna, dan fail telah dimuat naik ke **GitHub** untuk memulakan fasa pembangunan (Proceed Development).
 
 ---
 
