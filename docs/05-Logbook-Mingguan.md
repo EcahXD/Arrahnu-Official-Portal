@@ -8,16 +8,12 @@
 
 ### [21/04/2026] - Pemilihan Konsep & Struktur Visual
 - **Aktiviti:** Kajian dan pemilihan template laman web yang sesuai dengan imej korporat syarikat.
-- **Tindakan:** Menilai beberapa template daripada HTML5 UP dan memilih template **Solid State** kerana reka bentuknya yang moden, kemas, responsif serta sesuai untuk laman web korporat.
+- **Tindakan:** Menilai beberapa template daripada HTML5 UP dan memilih template **Solid State** kerana reka bentuknya yang moden, kemas, responsif serta sesuai digunakan untuk laman web korporat.
 
-### [22/04/2026] - Penyesuaian Identiti Korporat (Skema Warna)
-- **Aktiviti:** Perbincangan berkaitan penyesuaian tema visual laman web.
-- **Tindakan:** Menukar skema warna asal template kepada gabungan warna merah gelap (maroon), emas (gold) dan kuning keemasan bagi menyesuaikan dengan identiti visual Ar-Rahnu Prihatin serta meningkatkan elemen korporat dan profesional.
+### [22/04/2026] - Penyesuaian Identiti Korporat (Skema Warna & Reka Bentuk)
+- **Aktiviti:** Proses penyesuaian awal template yang dipilih mengikut keperluan dan identiti syarikat.
+- **Tindakan:** Melakukan perubahan terhadap skema warna asal template dengan menyesuaikan gabungan warna merah gelap (maroon), emas (gold) dan kuning keemasan. Selain itu, struktur visual dan elemen CSS turut disesuaikan bagi memenuhi kehendak pihak pengurusan serta mengekalkan identiti Ar-Rahnu Prihatin.
 
-### [23/04/2026] - Kajian Lesen & Penggunaan Template
-- **Aktiviti:** Meneliti aspek penggunaan template sumber terbuka daripada HTML5 UP.
-- **Tindakan:** Memastikan penggunaan template adalah selaras dengan lesen asal serta mengekalkan kredit kepada pembangun asal HTML5 UP dalam projek pembangunan laman web.
-
-### [24/04/2026] - Kelulusan Fasa Rekabentuk & Permulaan Pembangunan
-- **Aktiviti:** Pembentangan konsep reka bentuk kepada pihak pengurusan syarikat.
-- **Tindakan:** Konsep reka bentuk, pemilihan template serta skema warna telah dibentangkan dan mendapat kelulusan daripada pihak pengurusan tertinggi sebelum projek diteruskan ke fasa pembangunan menggunakan GitHub sebagai platform utama.
+### [23/04/2026] - Semakan Akhir, Kelulusan & Deployment Projek
+- **Aktiviti:** Sesi semakan akhir hasil penyesuaian template dan reka bentuk laman web bersama pihak pengurusan syarikat.
+- **Tindakan:** Projek telah dibentangkan kepada pihak pengurusan tertinggi (CEO) dan telah mendapat kelulusan rasmi. Selepas kelulusan diberikan, keseluruhan fail projek yang telah siap dikemas kini dan dimuat naik ke platform GitHub sebagai persediaan untuk fasa pembangunan dan penggunaan seterusnya.
