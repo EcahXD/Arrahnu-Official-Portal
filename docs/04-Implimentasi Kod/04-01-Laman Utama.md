@@ -241,6 +241,3 @@ Antara kelebihan hasil pembangunan Laman Utama ini ialah:
 Secara keseluruhannya, pembangunan Laman Utama Portal Ar-Rahnu Prihatin berjaya dilaksanakan dengan mengubah suai template Solid State kepada sebuah portal korporat yang menepati kehendak syarikat. Penyesuaian kandungan, identiti visual, struktur navigasi serta pengubahsuaian CSS telah berjaya menghasilkan halaman utama yang profesional, menarik dan responsif.
 
 Laman Utama ini menjadi asas penting kepada pembangunan halaman-halaman lain dalam portal dan berfungsi sebagai medium rasmi pertama yang akan dilihat oleh pengguna.
-
-```
-```
