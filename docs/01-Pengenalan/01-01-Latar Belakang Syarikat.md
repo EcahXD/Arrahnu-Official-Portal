@@ -1,27 +1,39 @@
 # 1.1 Latar Belakang Syarikat
 
 ## Pengenalan
-**Ar-Rahnu Prihatin** merupakan sebuah syarikat yang menjalankan perniagaan berasaskan perkhidmatan pajak gadai Islam atau Ar-Rahnu di Malaysia. Berdasarkan maklumat pendaftaran korporat yang tersedia secara awam, syarikat ini didaftarkan secara rasmi pada 24 Februari 2025 dan beroperasi di negeri Kedah, Malaysia. Penubuhan syarikat ini menunjukkan perkembangan positif industri kewangan Islam tempatan yang semakin mendapat sambutan masyarakat kerana menawarkan pembiayaan segera, mudah dan patuh syariah. 
 
-Ar-Rahnu merupakan satu sistem pajak gadai Islam yang menggunakan emas atau barang kemas sebagai cagaran untuk mendapatkan tunai sementara tanpa unsur riba. Berbeza dengan pajak gadai konvensional, sistem Ar-Rahnu menekankan prinsip keadilan, ketelusan, keselamatan barang cagaran serta caj upah simpan yang munasabah. Oleh sebab itu, perkhidmatan seperti yang ditawarkan oleh Ar-Rahnu Prihatin menjadi alternatif penting kepada masyarakat yang memerlukan bantuan kewangan segera.
+**Ar-Rahnu Prihatin** merupakan sebuah syarikat yang menjalankan perniagaan berasaskan perkhidmatan pajak gadai Islam atau Ar-Rahnu di Malaysia. Penubuhan syarikat ini mencerminkan perkembangan positif industri kewangan Islam tempatan yang semakin berkembang sejajar dengan peningkatan permintaan masyarakat terhadap perkhidmatan pembiayaan yang cepat, selamat dan patuh Syariah. Dalam era ekonomi yang mencabar serta peningkatan kos sara hidup, keperluan terhadap sumber kewangan segera menjadi semakin penting, khususnya bagi individu dan usahawan kecil yang memerlukan modal tunai dalam tempoh singkat.
+
+Sistem Ar-Rahnu merupakan satu bentuk pajak gadai Islam yang menggunakan emas atau barang kemas sebagai cagaran bagi mendapatkan pembiayaan tunai sementara. Berbeza dengan sistem pajak gadai konvensional, Ar-Rahnu menitikberatkan prinsip keadilan, ketelusan, keselamatan barang cagaran serta bebas daripada unsur riba. Oleh itu, kewujudan Ar-Rahnu Prihatin memberi alternatif pembiayaan yang lebih diyakini dan mesra pengguna kepada masyarakat.
 
 ## Sejarah Penubuhan
-Penubuhan Ar-Rahnu Prihatin adalah sejajar dengan peningkatan permintaan terhadap produk kewangan Islam di Malaysia. Dalam keadaan kos sara hidup yang semakin meningkat, ramai pengguna mencari kaedah pembiayaan yang selamat, cepat dan tidak membebankan. Oleh itu, syarikat ini diwujudkan bagi menyediakan penyelesaian kewangan berasaskan konsep Syariah kepada pelanggan yang memerlukan modal pusingan, kecemasan kewangan, pembiayaan perniagaan kecil atau keperluan harian.
 
-## Aktiviti Perniagaan & Rangkaian Cawangan
-Berdasarkan maklumat korporat, aktiviti utama Ar-Rahnu Prihatin adalah menjalankan pajak gadai Islam di bawah prinsip Syariah Tawarruq dan Rahn. Selain itu, syarikat ini turut menyediakan pembiayaan patuh syariah melalui konsep Commodity Murabahah secara Tawarruq, dengan emas atau barang kemas dijadikan cagaran.
+Ar-Rahnu Prihatin ditubuhkan bagi memenuhi keperluan masyarakat terhadap perkhidmatan kewangan Islam yang mudah diakses dan berdaya saing. Pertumbuhan sektor kewangan Islam di Malaysia telah membuka peluang kepada pelbagai organisasi untuk menyediakan perkhidmatan berasaskan Syariah yang lebih moden dan sistematik. Penubuhan syarikat ini juga selari dengan usaha kerajaan dan institusi kewangan dalam memperkukuh ekosistem ekonomi Islam di negara ini.
 
-Kini, Ar-Rahnu Prihatin telah berkembang dengan pesat dan memiliki **26 cawangan** di seluruh negara, termasuk cawangan pandu lalu yang beroperasi secara strategik. Perkhidmatan seperti ini sangat penting kerana ia membolehkan pelanggan memperoleh tunai segera tanpa perlu menjual aset emas mereka, dan ia direka untuk mudah diakses oleh pelbagai lapisan masyarakat.
+Selain itu, syarikat ini diwujudkan sebagai respon kepada keperluan pengguna yang memerlukan pembiayaan segera bagi tujuan kecemasan, modal pusingan perniagaan, perbelanjaan pendidikan, kos rawatan kesihatan dan keperluan harian. Dengan menggunakan emas sebagai cagaran, pelanggan masih dapat mengekalkan pemilikan aset mereka sambil memperoleh tunai segera tanpa perlu menjual barang berharga tersebut.
+
+## Aktiviti Perniagaan dan Rangkaian Cawangan
+
+Aktiviti utama Ar-Rahnu Prihatin adalah menyediakan perkhidmatan pajak gadai Islam berlandaskan prinsip Syariah. Melalui perkhidmatan ini, pelanggan boleh mencagarkan emas atau barang kemas untuk mendapatkan pembiayaan tunai dalam tempoh yang singkat dengan prosedur yang mudah dan cepat. Nilai pembiayaan yang ditawarkan bergantung kepada berat, ketulenan serta harga semasa emas yang dicagarkan.
+
+Di samping itu, syarikat ini turut menawarkan perkhidmatan pembiayaan Islam yang mematuhi garis panduan Syariah melalui konsep-konsep kewangan Islam yang dibenarkan. Pendekatan ini membolehkan pelanggan menikmati kemudahan kewangan secara sah dan telus tanpa unsur penindasan.
+
+Sehingga kini, Ar-Rahnu Prihatin telah mengembangkan operasinya melalui pembukaan beberapa cawangan di seluruh negara termasuk lokasi strategik yang mudah diakses pelanggan. Kewujudan rangkaian cawangan ini memudahkan orang ramai mendapatkan perkhidmatan secara bersemuka serta meningkatkan keyakinan pelanggan terhadap kredibiliti syarikat.
 
 ## Visi Syarikat
-Menjadi penyedia perkhidmatan Ar-Rahnu dan pembiayaan Islam yang dipercayai, moden, telus serta pilihan utama masyarakat Malaysia.
+
+Menjadi penyedia perkhidmatan Ar-Rahnu dan pembiayaan Islam yang dipercayai, moden, telus serta menjadi pilihan utama masyarakat di Malaysia.
 
 ## Misi Syarikat
-Misi Ar-Rahnu Prihatin adalah menyediakan kemudahan kewangan segera berlandaskan syariah, menawarkan proses penilaian emas yang adil dan telus, menjaga keselamatan barang cagaran pelanggan, memberi layanan mesra pelanggan serta menyumbang kepada pembangunan ekonomi masyarakat setempat.
+
+Misi Ar-Rahnu Prihatin adalah menyediakan kemudahan kewangan segera berlandaskan prinsip Syariah, menawarkan proses penilaian emas yang adil dan telus, memastikan keselamatan barang cagaran pelanggan sentiasa terjamin, memberikan layanan pelanggan yang mesra dan profesional serta menyumbang kepada pembangunan ekonomi masyarakat setempat.
 
 ## Potensi Perkembangan Masa Hadapan
-Dengan pertumbuhan sektor digital dan peningkatan penggunaan teknologi dalam kewangan, Ar-Rahnu Prihatin sedang mengorak langkah dengan memperluaskan perkhidmatan melalui **pembangunan portal korporat rasmi**. Inisiatif ini bukan sahaja akan memudahkan pelanggan mencari maklumat berkaitan 26 cawangan dengan lebih efisien, malah membuka ruang untuk integrasi sistem semakan harga emas, pengurusan pangkalan data, dan pemasaran digital yang komprehensif pada masa akan datang.
+
+Seiring dengan perkembangan teknologi digital, Ar-Rahnu Prihatin mempunyai potensi besar untuk terus berkembang melalui penggunaan sistem digital dan platform dalam talian. Pembangunan portal korporat rasmi syarikat mampu menjadi medium penting bagi meningkatkan imej profesional organisasi serta memudahkan pelanggan mendapatkan maklumat berkaitan perkhidmatan, kadar semasa, lokasi cawangan dan waktu operasi.
+
+Selain itu, penggunaan teknologi digital juga membolehkan syarikat mengintegrasikan sistem semakan harga emas semasa, tempahan janji temu pelanggan, pengurusan pangkalan data serta strategi pemasaran digital yang lebih berkesan. Langkah ini selaras dengan keperluan semasa pengguna yang lebih cenderung mendapatkan maklumat dan perkhidmatan secara atas talian.
 
 ## Kesimpulan
 
-Secara keseluruhannya, Ar-Rahnu Prihatin merupakan sebuah syarikat baharu dalam industri Ar-Rahnu Malaysia yang menawarkan perkhidmatan pajak gadai Islam serta pembiayaan patuh syariah. Penubuhannya memberi manfaat kepada masyarakat dengan menyediakan akses kewangan segera secara adil, selamat dan bebas riba. Dengan pengurusan yang baik serta strategi pemasaran moden, syarikat ini berpotensi berkembang sebagai antara penyedia Ar-Rahnu yang kompetitif pada masa hadapan. 
+Secara keseluruhannya, Ar-Rahnu Prihatin merupakan sebuah syarikat yang berpotensi besar dalam industri pajak gadai Islam di Malaysia. Perkhidmatan yang ditawarkan bukan sahaja membantu masyarakat mendapatkan pembiayaan segera secara patuh Syariah, malah memberi penyelesaian kewangan yang selamat, adil dan mudah diakses. Dengan pengurusan yang sistematik, rangkaian cawangan yang semakin berkembang serta penggunaan teknologi digital melalui pembangunan portal korporat, syarikat ini berupaya menjadi antara penyedia perkhidmatan Ar-Rahnu yang kompetitif dan dipercayai pada masa hadapan.
