@@ -17,3 +17,29 @@
 ### [23/04/2026] - Semakan Akhir, Kelulusan & Deployment Projek
 - **Aktiviti:** Sesi semakan akhir hasil penyesuaian template dan reka bentuk laman web bersama pihak pengurusan syarikat.
 - **Tindakan:** Projek telah dibentangkan kepada pihak pengurusan tertinggi (CEO) dan telah mendapat kelulusan rasmi. Selepas kelulusan diberikan, keseluruhan fail projek yang telah siap dikemas kini dan dimuat naik ke platform GitHub sebagai persediaan untuk fasa pembangunan dan penggunaan seterusnya.
+
+---
+
+### [25/04/2026] - Permulaan Fasa Pembangunan Laman Utama
+- **Aktiviti:** Memulakan proses pembangunan Laman Utama Portal Ar-Rahnu Prihatin berdasarkan template Solid State yang telah dipilih pada fasa reka bentuk sebelumnya.
+- **Tindakan:** Melakukan penyesuaian awal terhadap struktur HTML termasuk pengemaskinian identiti laman pada tab pelayar dengan menukar nama kepada “Ar-Rahnu Prihatin Pandu Lalu Melaka” serta memasukkan logo rasmi syarikat sebagai favicon bagi tujuan penjenamaan awal (branding consistency).
+
+### [26/04/2026] - Penambahbaikan Hero Section dan Identiti Visual
+- **Aktiviti:** Penyesuaian bahagian utama (banner/hero section) laman web bagi memperkukuhkan mesej utama syarikat.
+- **Tindakan:** Tajuk utama laman telah ditukar kepada “Ar-Rahnu Prihatin: Solusi Tunai Segera & Patuh Syariah” dan disertakan dengan deskripsi sokongan “Tukarkan Emas Anda Kepada Tunai Dengan Margin Pembiayaan Tertinggi.” Dalam masa yang sama, ikon asal dalam bahagian ini telah digantikan dengan logo rasmi syarikat. Beberapa penyesuaian CSS turut dilakukan bagi memastikan kedudukan teks dan imej berada dalam susun atur yang lebih kemas dan seimbang.
+
+### [27/04/2026] - Pembangunan Seksyen Informasi dan Kad Perkhidmatan
+- **Aktiviti:** Menstruktur semula kandungan laman utama dengan memberi fokus kepada bahagian informasi utama syarikat.
+- **Tindakan:** Bahagian “Kenapa Ar-Rahnu Prihatin?” telah diletakkan di bahagian lebih atas untuk meningkatkan keterlihatan pengguna. Selain itu, empat kad utama perkhidmatan telah dibangunkan dengan imej sokongan yang dijana menggunakan AI (Gemini dan ChatGPT). Pada masa yang sama, beberapa pelarasan CSS turut dilakukan bagi kad tersebut termasuk saiz imej, jarak (spacing), serta alignment bagi memastikan paparan lebih responsif dan konsisten.
+
+### [28/04/2026] - Penyesuaian Seksyen Navigasi Maklumat
+- **Aktiviti:** Pembangunan bahagian navigasi maklumat utama dalam laman utama.
+- **Tindakan:** Dibina empat komponen utama iaitu Perkhidmatan, Mengenai Kami, Harga & Rundingan, dan Hubungi Kami. Setiap komponen dilengkapi dengan penerangan ringkas, imej sokongan serta pautan navigasi ke halaman masing-masing (walaupun halaman lain masih belum dibangunkan). Penyesuaian CSS juga dilakukan bagi memastikan layout setiap seksyen kelihatan seimbang dan seragam.
+
+### [29/04/2026] - Pembangunan Footer dan Integrasi Maklumat Syarikat
+- **Aktiviti:** Pembangunan bahagian footer laman web bagi melengkapkan struktur Laman Utama.
+- **Tindakan:** Footer telah dibina dengan memasukkan maklumat lokasi cawangan, nombor telefon, waktu operasi serta pautan media sosial seperti Facebook dan TikTok. Logo Ar-Rahnu turut diletakkan pada bahagian kanan bawah footer bersama kredit pembangun. Warna teks pada bahagian tajuk footer juga telah disesuaikan kepada warna emas bagi mengekalkan identiti visual tema laman.
+
+### [30/04/2026] - Kemasan Akhir Laman Utama & Dokumentasi Kod
+- **Aktiviti:** Proses kemasan akhir (final refinement) bagi Laman Utama Portal Ar-Rahnu Prihatin.
+- **Tindakan:** Beberapa penambahbaikan akhir telah dilakukan termasuk pelarasan CSS seperti saiz imej, kedudukan logo, serta warna teks pada beberapa elemen bagi memastikan konsistensi visual keseluruhan laman. Semua perubahan yang dilakukan sepanjang fasa pembangunan Laman Utama telah didokumentasikan dalam fail `04-01-Laman-Utama.md` sebagai rujukan teknikal bagi projek ini. Pada peringkat ini, hanya Laman Utama yang telah dibangunkan sepenuhnya manakala halaman lain masih dalam perancangan untuk fasa seterusnya.
