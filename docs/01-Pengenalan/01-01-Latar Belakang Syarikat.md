@@ -24,4 +24,4 @@ Dengan pertumbuhan sektor digital dan peningkatan penggunaan teknologi dalam kew
 
 ## Kesimpulan
 
-Secara keseluruhannya, :contentReference[oaicite:11]{index=11} merupakan sebuah syarikat baharu dalam industri Ar-Rahnu Malaysia yang menawarkan perkhidmatan pajak gadai Islam serta pembiayaan patuh syariah. Penubuhannya memberi manfaat kepada masyarakat dengan menyediakan akses kewangan segera secara adil, selamat dan bebas riba. Dengan pengurusan yang baik serta strategi pemasaran moden, syarikat ini berpotensi berkembang sebagai antara penyedia Ar-Rahnu yang kompetitif pada masa hadapan. :contentReference[oaicite:12]{index=12}
+Secara keseluruhannya, Ar-Rahnu Prihatin merupakan sebuah syarikat baharu dalam industri Ar-Rahnu Malaysia yang menawarkan perkhidmatan pajak gadai Islam serta pembiayaan patuh syariah. Penubuhannya memberi manfaat kepada masyarakat dengan menyediakan akses kewangan segera secara adil, selamat dan bebas riba. Dengan pengurusan yang baik serta strategi pemasaran moden, syarikat ini berpotensi berkembang sebagai antara penyedia Ar-Rahnu yang kompetitif pada masa hadapan. 
