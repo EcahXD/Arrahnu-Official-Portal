@@ -33,6 +33,28 @@ body {
 	line-height: 1;
 }
 
+/* Container untuk logo baru */
+.logo-container {
+    display: block;
+    margin-bottom: 1.5em; /* Jarak ke tulisan H2 */
+}
+
+/* Styling logo rectangle */
+.custom-logo {
+    height: 4em;          /* Samakan height dengan saiz icon asal */
+    width: auto;          /* Biarkan dia panjang mengikut nisbah logo asal */
+    display: inline-block;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.2)); /* Optional: bagi nampak timbul sikit */
+}
+
+/* Mobile view: Kecilkan sikit logo kalau skrin phone */
+@media screen and (max-width: 480px) {
+    .custom-logo {
+        height: 2.5em; 
+    }
+}
+
 ol, ul {
 	list-style: none;
 }
