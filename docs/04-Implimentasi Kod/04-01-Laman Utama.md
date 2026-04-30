@@ -212,7 +212,7 @@ Maklumat harga emas dan nilai pinjaman.
 
 Maklumat hubungan dan servis pelanggan.
 
-![Spotlight Section](portaldemoimages/spotlight4.png)
+![Spotlight Section](portaldemoimages/spotlight5.png)
 
 ---
 
