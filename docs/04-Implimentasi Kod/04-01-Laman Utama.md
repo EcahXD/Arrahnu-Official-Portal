@@ -63,7 +63,7 @@ Fungsi:
 
 #### Paparan Browser Tab
 
-![Browser Tab](portaldemoimages/browser-tab.png)
+![Browser Tab](portaldemoimages/browser.png)
 
 ---
 
@@ -139,7 +139,7 @@ Teks utama dan subtext:
 
 #### Paparan Banner
 
-![Banner](portaldemoimages/banner-main.png)
+![Banner](portaldemoimages/banner.png)
 
 ---
 
@@ -168,7 +168,7 @@ Setiap kad mempunyai:
 
 #### Paparan Feature Cards
 
-![Cards](portaldemoimages/cards-section.png)
+![Cards](portaldemoimages/card.png)
 
 ---
 
@@ -191,28 +191,28 @@ Bahagian yang dibina:
 
 Menerangkan servis pembiayaan tunai segera.
 
-![Spotlight Section](portaldemoimages/services-section.png)
+![Spotlight Section](portaldemoimages/spotlight1.png)
 
 
 #### Mengenai Kami
 
 Penerangan syarikat dan nilai korporat.
 
-![Spotlight Section](portaldemoimages/services-section.png)
+![Spotlight Section](portaldemoimages/spotlight2.png)
 
 
 #### Harga Emas & Rundingan
 
 Maklumat harga emas dan nilai pinjaman.
 
-![Spotlight Section](portaldemoimages/services-section.png)
+![Spotlight Section](portaldemoimages/spotlight3.png)
 
 
 #### Hubungi Kami
 
 Maklumat hubungan dan servis pelanggan.
 
-![Spotlight Section](portaldemoimages/services-section.png)
+![Spotlight Section](portaldemoimages/spotlight4.png)
 
 ---
 
@@ -239,7 +239,7 @@ Kod:
 
 #### Paparan Footer
 
-![Footer](portaldemoimages/footer-section.png)
+![Footer](portaldemoimages/footer.png)
 
 ---
 
@@ -382,10 +382,11 @@ Media query digunakan bagi memastikan portal sesuai untuk:
 * Tablet
 * Telefon pintar
 
-#### Paparan Dekstop dan Mobile
+#### Paparan Dekstop, Mobile, dan Tablet
 
-![Dekstop View](portaldemoimages/footer-section.png)
-![Mobile View](portaldemoimages/footer-section.png)
+![Dekstop View](portaldemoimages/dekstop.png)
+![Mobile View](portaldemoimages/mobile.png)
+![Tab View](portaldemoimages/tab.png)
 
 ---
 
