@@ -43,8 +43,6 @@ Keterangan:
 
 ## 4. Pembangunan Struktur HTML
 
----
-
 ### 4.1 Bahagian Head (Browser Tab & Metadata)
 
 Bahagian `<head>` digunakan untuk menetapkan nama portal pada tab browser, favicon logo rasmi, tetapan responsif dan sambungan fail CSS.
@@ -247,7 +245,6 @@ Kod:
 
 ## 5. Pengubahsuaian CSS
 
----
 
 ### 5.1 Penyesuaian Logo Banner
 
