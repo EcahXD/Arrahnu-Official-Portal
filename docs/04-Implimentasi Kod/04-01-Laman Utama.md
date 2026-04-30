@@ -1,159 +1,259 @@
 # 04-01 Laman Utama
 
-## Pengenalan
+## 1. Pengenalan
 
-Laman Utama merupakan halaman pertama yang akan dipaparkan kepada pengguna apabila melayari Portal Ar-Rahnu Prihatin. Halaman ini dibangunkan sebagai medium utama bagi memperkenalkan syarikat, menjelaskan kelebihan perkhidmatan yang ditawarkan, serta menyediakan navigasi awal kepada halaman-halaman lain dalam portal. Oleh kerana Laman Utama berfungsi sebagai pintu masuk utama kepada pengguna, reka bentuk halaman ini diberi perhatian khusus dari segi susun atur, identiti visual, kemudahan navigasi dan daya tarikan antaramuka.
+Laman Utama merupakan halaman pertama yang dipaparkan kepada pengguna apabila melayari Portal Ar-Rahnu Prihatin. Halaman ini dibangunkan sebagai medium utama untuk memperkenalkan syarikat, menjelaskan kelebihan perkhidmatan yang ditawarkan, serta menjadi pintu masuk kepada halaman-halaman lain dalam portal.
 
-Pembangunan Laman Utama dilaksanakan menggunakan bahasa **HTML5**, **CSS3**, dan sedikit penggunaan **JavaScript** melalui fungsi asal template Solid State. Struktur asas halaman diubah suai mengikut keperluan syarikat bagi menyesuaikan kandungan dengan identiti Ar-Rahnu Prihatin.
+Bagi memastikan imej profesional dan keyakinan pengguna dapat dibina sejak awal, pembangunan halaman ini memberi fokus kepada reka bentuk moden, identiti korporat, susun atur kandungan yang jelas, serta pengalaman pengguna yang mesra dan responsif.
 
----
-
-## Objektif Pembangunan Laman Utama
-
-Antara objektif utama pembangunan halaman ini adalah:
-
-1. Menjadi halaman pengenalan rasmi syarikat kepada pengguna.
-2. Menampilkan imej korporat yang profesional dan dipercayai.
-3. Menyediakan akses pantas ke halaman lain seperti Perkhidmatan, Mengenai Kami, Harga & Anggaran dan Hubungi Kami.
-4. Menjelaskan kelebihan utama Ar-Rahnu Prihatin kepada pelanggan baharu.
-5. Menarik minat pengguna melalui reka bentuk moden dan responsif.
+Portal ini dibangunkan sebagai **laman web statik (static website)** menggunakan gabungan teknologi **HTML5**, **CSS3**, dan fungsi JavaScript asal daripada template **Solid State by HTML5 UP**.
 
 ---
 
-## Struktur Kod HTML
+## 2. Objektif Pembangunan
 
-Laman Utama dibangunkan menggunakan struktur HTML yang tersusun dan dibahagikan kepada beberapa komponen utama seperti berikut:
+Objektif pembangunan Laman Utama adalah seperti berikut:
 
-1. `<head>` – Mengandungi tajuk halaman, metadata, fail CSS dan favicon.
-2. `<header>` – Bahagian menu atas laman web.
-3. `<nav id="menu">` – Menu navigasi sisi untuk paparan mudah alih.
-4. `<section id="banner">` – Bahagian utama (hero section).
-5. `<section id="wrapper">` – Kandungan utama laman.
-6. `<section id="footer">` – Bahagian kaki laman yang mengandungi maklumat syarikat.
-7. Fail JavaScript – Digunakan untuk menu interaktif dan animasi template.
+1. Menjadi halaman rasmi pengenalan syarikat.
+2. Menonjolkan imej korporat yang profesional dan diyakini.
+3. Menjelaskan kelebihan utama Ar-Rahnu Prihatin.
+4. Menyediakan navigasi ke halaman lain.
+5. Menampilkan reka bentuk moden dan responsif.
+6. Meningkatkan keyakinan pengguna terhadap perkhidmatan syarikat.
 
 ---
 
-## Penyesuaian Identiti Laman
+## 3. Struktur Fail Digunakan
 
-Pada bahagian `<head>`, tajuk laman telah ditukar daripada tajuk asal template kepada nama rasmi syarikat seperti berikut:
+```text
+index.html
+assets/css/main.css
+assets/css/noscript.css
+assets/js/main.js
+images/
+portaldemoimages/
+````
+
+Keterangan:
+
+* `index.html` → Halaman utama portal.
+* `main.css` → Fail gaya utama yang diubah suai.
+* `images/` → Logo dan imej digunakan dalam portal.
+* `portaldemoimages/` → Folder screenshot dokumentasi.
+
+---
+
+# 4. Pembangunan Struktur HTML
+
+---
+
+## 4.1 Bahagian Head (Browser Tab & Metadata)
+
+Bahagian `<head>` digunakan untuk menetapkan nama portal pada tab browser, favicon logo rasmi, tetapan responsif dan sambungan fail CSS.
+
+Kod:
 
 ```html
 <title>Ar-rahnu Prihatin Pandu Lalu Melaka</title>
-````
-
-Selain itu, favicon laman turut ditukar kepada logo rasmi syarikat menggunakan kod berikut:
-
-```html
 <link rel="icon" type="image/png" href="images/logo.jpeg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-Perubahan ini membolehkan nama dan logo syarikat dipaparkan pada tab pelayar pengguna.
+Fungsi:
+
+* Menukar nama tab browser.
+* Menukar icon browser kepada logo syarikat.
+* Menjadikan laman sesuai di telefon dan desktop.
+
+### Paparan Browser Tab
+
+```md
+![Browser Tab](portaldemoimages/browser-tab.png)
+```
 
 ---
 
-## Header dan Menu Navigasi
+## 4.2 Header dan Navigasi
 
-Bahagian header digunakan sebagai menu utama laman web. Nama syarikat diletakkan pada bahagian kiri manakala butang “Halaman Lain” disediakan pada bahagian kanan.
+Header digunakan sebagai menu utama portal.
 
-Menu navigasi mengandungi lima pautan utama iaitu:
-
-1. Laman Utama
-2. Perkhidmatan
-3. Mengenai Kami
-4. Harga & Anggaran
-5. Hubungi Kami
-
-Struktur ini memudahkan pengguna berpindah ke halaman lain dengan cepat.
-
----
-
-## Banner Utama (Hero Section)
-
-Bahagian banner dibangunkan sebagai fokus utama apabila pengguna mula memasuki laman web. Dalam bahagian ini, logo rasmi syarikat digunakan menggantikan ikon asal template.
-
-Kod berikut digunakan:
+Kod:
 
 ```html
-<div class="logo-container">
-    <img src="images/logo.jpeg" alt="Ar-Rahnu Prihatin" class="custom-logo">
-</div>
+<header id="header" class="alt">
+    <h1><a href="index.html">Arrahnu Prihatin</a></h1>
+</header>
 ```
 
-Tajuk utama yang digunakan ialah:
+Navigasi sisi:
 
-**Ar-Rahnu Prihatin: Solusi Tunai Segera & Patuh Syariah**
+```html
+<nav id="menu">
+```
 
-Manakala slogan sokongan ialah:
+Menu mengandungi:
 
-**Tukarkan Emas Anda Kepada Tunai Dengan Margin Pembiayaan Tertinggi.**
+* Laman Utama
+* Perkhidmatan
+* Mengenai Kami
+* Harga & Anggaran
+* Hubungi Kami
 
-Bahagian ini penting kerana memberikan kesan pertama yang profesional kepada pengguna.
+### Paparan Header
+
+```md
+![Header](portaldemoimages/header-menu.png)
+```
+
+### Paparan Mobile Menu
+
+```md
+![Mobile Menu](portaldemoimages/mobile-menu.png)
+```
 
 ---
 
-## Seksyen Kelebihan Utama (Feature Cards)
+## 4.3 Hero Banner Utama
 
-Selepas banner utama, bahagian kad maklumat dibina bagi menjelaskan kelebihan utama syarikat. Seksyen ini diberi tajuk:
+Hero Banner ialah bahagian pertama yang menarik perhatian pengguna.
 
-**Kenapa Ar-Rahnu Prihatin?**
+Kod:
 
-Empat kad utama dibangunkan iaitu:
+```html
+<section id="banner">
+```
+
+Logo rasmi diletakkan menggantikan icon asal template.
+
+Kod:
+
+```html
+<img src="images/logo.jpeg" class="custom-logo">
+```
+
+Teks utama:
+
+```text
+Ar-rahnu Prihatin: Solusi Tunai Segera & Patuh Syariah
+```
+
+Subteks:
+
+```text
+Tukarkan Emas Anda Kepada Tunai Dengan Margin Pembiayaan Tertinggi.
+```
+
+### Paparan Banner
+
+```md
+![Banner](portaldemoimages/banner-main.png)
+```
+
+---
+
+## 4.4 Seksyen Kelebihan Utama (Feature Cards)
+
+Bahagian ini menerangkan sebab pelanggan memilih Ar-Rahnu Prihatin.
+
+Kod struktur:
+
+```html
+<section class="features">
+```
+
+Empat kad utama dibina:
 
 1. Margin Pembiayaan Tinggi
 2. Penilaian Pakar & Teliti
 3. Jaminan Keselamatan 24 Jam
 4. Pembiayaan Tanpa Riba
 
-Setiap kad mengandungi imej ilustrasi yang dijana menggunakan AI dan penerangan ringkas bagi membantu pengguna memahami manfaat perkhidmatan.
+Setiap kad mempunyai:
 
----
-
-## Seksyen Maklumat Navigasi
-
-Empat seksyen tambahan dibangunkan bagi menghubungkan pengguna ke halaman utama lain:
-
-1. Perkhidmatan
-2. Mengenai Kami
-3. Harga Emas & Rundingan
-4. Hubungi Kami
-
-Setiap seksyen mengandungi:
-
-* Imej berkaitan
-* Tajuk modul
+* Imej ilustrasi AI
+* Tajuk
 * Penerangan ringkas
-* Butang pautan ke halaman berkaitan
 
-Pendekatan ini membantu pengguna memahami kandungan portal sebelum meneroka halaman lain.
+### Paparan Feature Cards
 
----
-
-## Footer Portal
-
-Bahagian footer dibangunkan bagi melengkapkan struktur laman web dan memaparkan maklumat penting syarikat.
-
-Maklumat yang dimasukkan adalah:
-
-1. Nama cawangan
-2. Alamat penuh
-3. Talian bantuan
-4. Nombor telefon
-5. Waktu operasi
-6. Pautan Facebook dan TikTok
-7. Kredit reka bentuk dan pembangun sistem
-
-Logo syarikat turut diletakkan pada bahagian kanan footer bagi mengekalkan identiti jenama.
+```md
+![Cards](portaldemoimages/cards-section.png)
+```
 
 ---
 
-## Pengubahsuaian CSS
+## 4.5 Seksyen Spotlight Maklumat
 
-Beberapa pengubahsuaian CSS telah dilakukan bagi menyesuaikan template asal dengan identiti Ar-Rahnu Prihatin.
+Empat seksyen tambahan dibina menggunakan komponen spotlight template.
 
-### 1. Penyesuaian Logo Banner
+Kod:
 
-Kod berikut digunakan untuk mengawal saiz logo:
+```html
+<section class="wrapper spotlight style1">
+```
+
+Bahagian yang dibina:
+
+### Perkhidmatan
+
+Menerangkan servis pembiayaan tunai segera.
+
+### Mengenai Kami
+
+Penerangan syarikat dan nilai korporat.
+
+### Harga Emas & Rundingan
+
+Maklumat harga emas dan nilai pinjaman.
+
+### Hubungi Kami
+
+Maklumat hubungan dan servis pelanggan.
+
+### Paparan Spotlight
+
+```md
+![Spotlight Section](portaldemoimages/services-section.png)
+```
+
+---
+
+## 4.6 Footer Portal
+
+Footer dibangunkan bagi meletakkan maklumat rasmi syarikat.
+
+Maklumat dimasukkan:
+
+* Nama syarikat
+* Lokasi penuh
+* Nombor telefon
+* Waktu operasi
+* Facebook
+* TikTok
+* Kredit pembangun
+* Logo syarikat
+
+Kod:
+
+```html
+<section id="footer">
+```
+
+### Paparan Footer
+
+```md
+![Footer](portaldemoimages/footer-section.png)
+```
+
+---
+
+# 5. Pengubahsuaian CSS
+
+---
+
+## 5.1 Penyesuaian Logo Banner
+
+Kod:
 
 ```css
 .custom-logo {
@@ -162,82 +262,175 @@ Kod berikut digunakan untuk mengawal saiz logo:
 }
 ```
 
-Versi mudah alih turut disediakan:
+Versi telefon:
 
 ```css
-@media screen and (max-width: 480px) {
-    .custom-logo {
-        height: 2.5em;
-    }
-}
+@media screen and (max-width: 480px)
 ```
 
-### 2. Skema Warna Latar Belakang
+Fungsi:
 
-Tema warna ditukar kepada gabungan:
+* Menyesuaikan saiz logo desktop.
+* Mengecilkan logo di telefon.
+
+---
+
+## 5.2 Tema Warna Korporat
+
+Warna asal template ditukar kepada identiti syarikat:
 
 * Maroon
-* Dark Gold
 * Gold
+* Dark Gold
 
-Menggunakan kod gradient seperti berikut:
+Kod:
 
 ```css
 background-image:
-linear-gradient(45deg, #2a2209 0%, #8B0000 50%, #D4AF37 100%);
+linear-gradient(45deg,#2a2209 0%, #8B0000 50%, #D4AF37 100%);
 ```
 
-### 3. Efek Glitter Animation
+Fungsi:
 
-Kesan glitter dibina menggunakan pseudo-element `::before` dan animasi CSS bagi menghasilkan suasana premium serta menyerlahkan elemen emas.
+* Menampilkan imej premium.
+* Selari dengan identiti emas dan kewangan.
 
-### 4. Kad Maklumat
+---
 
-Kad maklumat diberikan:
+## 5.3 Glitter Animation
 
-* Gradient emas gelap
-* Border emas
-* Animasi glitter
-* Layout responsif dua kolum
+Kesan glitter ditambah bagi menyerlahkan elemen premium.
 
-### 5. Imej Spotlight Bulat
-
-Imej bagi seksyen spotlight ditukar menjadi bentuk bulat menggunakan:
+Kod:
 
 ```css
-border-radius: 50%;
+body::before
+```
+
+Menggunakan:
+
+* `radial-gradient`
+* `animation`
+* `mask-image`
+
+Fungsi:
+
+* Menjadikan background lebih hidup.
+* Memberi efek elegan.
+
+---
+
+## 5.4 Kad Maklumat Premium
+
+Kad diubah menggunakan gradient dan border emas.
+
+Kod:
+
+```css
+.features article
+```
+
+Penambahbaikan:
+
+* Border emas
+* Background gradient
+* Glitter overlay
+* Layout dua kolum
+
+---
+
+## 5.5 Gambar Bulat Spotlight
+
+Kod:
+
+```css
+.wrapper.spotlight .image {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}
+```
+
+Fungsi:
+
+* Menjadikan imej lebih kemas.
+* Konsisten pada semua seksyen.
+
+---
+
+## 5.6 Responsive Layout
+
+Media query digunakan bagi memastikan portal sesuai untuk:
+
+* Desktop
+* Laptop
+* Tablet
+* Telefon pintar
+
+### Paparan Mobile
+
+```md
+![Mobile View](portaldemoimages/mobile-view-home.png)
+```
+
+---
+
+# 6. Ujian Sistem
+
+Ujian dijalankan bagi memastikan semua komponen berfungsi dengan baik.
+
+| Komponen          | Status |
+| ----------------- | ------ |
+| Browser Tab       | Lulus  |
+| Header Menu       | Lulus  |
+| Mobile Navigation | Lulus  |
+| Banner            | Lulus  |
+| Cards Section     | Lulus  |
+| Spotlight Section | Lulus  |
+| Footer            | Lulus  |
+| Responsive Mobile | Lulus  |
+
+---
+
+# 7. Masalah dan Penyelesaian
+
+## Isu 1: Logo Tidak Sesuai Dalam Banner
+
+**Penyelesaian:**
+Menambah class `.custom-logo` dan kawalan saiz manual.
+
+## Isu 2: Gambar Spotlight Lonjong
+
+**Penyelesaian:**
+Menggunakan:
+
+```css
+aspect-ratio: 1/1;
 object-fit: cover;
 ```
 
----
+## Isu 3: Tema Template Tidak Sesuai
 
-## Reka Bentuk Responsif
+**Penyelesaian:**
+Menukar keseluruhan skema warna kepada maroon dan gold.
 
-Laman Utama dibangunkan secara responsif supaya sesuai dipaparkan pada:
+## Isu 4: Footer Kurang Menarik
 
-1. Komputer desktop
-2. Komputer riba
-3. Tablet
-4. Telefon pintar
-
-Saiz logo, susun atur kandungan dan elemen navigasi akan berubah secara automatik mengikut saiz skrin pengguna.
+**Penyelesaian:**
+Membina footer custom dengan icon sosial media dan logo syarikat.
 
 ---
 
-## Kelebihan Implementasi
+# 8. Rumusan
 
-Antara kelebihan hasil pembangunan Laman Utama ini ialah:
+Secara keseluruhannya, pembangunan Laman Utama Portal Ar-Rahnu Prihatin berjaya dilaksanakan dengan baik melalui proses penyesuaian template Solid State kepada identiti korporat syarikat.
 
-1. Menampilkan identiti korporat yang lebih kukuh.
-2. Meningkatkan kepercayaan pengguna terhadap syarikat.
-3. Memudahkan pelanggan mendapatkan maklumat awal.
-4. Menyediakan navigasi yang jelas dan mesra pengguna.
-5. Mempunyai reka bentuk moden serta premium.
+Halaman ini kini mempunyai:
 
----
+* Identiti rasmi syarikat
+* Rekaan moden dan premium
+* Kandungan yang jelas
+* Navigasi mudah
+* Responsif untuk semua peranti
 
-## Kesimpulan
+Laman Utama ini menjadi asas utama kepada pembangunan halaman seterusnya seperti Perkhidmatan, Mengenai Kami, Harga & Anggaran dan Hubungi Kami.
 
-Secara keseluruhannya, pembangunan Laman Utama Portal Ar-Rahnu Prihatin berjaya dilaksanakan dengan mengubah suai template Solid State kepada sebuah portal korporat yang menepati kehendak syarikat. Penyesuaian kandungan, identiti visual, struktur navigasi serta pengubahsuaian CSS telah berjaya menghasilkan halaman utama yang profesional, menarik dan responsif.
-
-Laman Utama ini menjadi asas penting kepada pembangunan halaman-halaman lain dalam portal dan berfungsi sebagai medium rasmi pertama yang akan dilihat oleh pengguna.
