@@ -31,7 +31,6 @@ assets/css/main.css
 assets/css/noscript.css
 assets/js/main.js
 images/
-portaldemoimages/
 ````
 
 Keterangan:
@@ -39,15 +38,14 @@ Keterangan:
 * `index.html` → Halaman utama portal.
 * `main.css` → Fail gaya utama yang diubah suai.
 * `images/` → Logo dan imej digunakan dalam portal.
-* `portaldemoimages/` → Folder screenshot dokumentasi.
 
 ---
 
-# 4. Pembangunan Struktur HTML
+## 4. Pembangunan Struktur HTML
 
 ---
 
-## 4.1 Bahagian Head (Browser Tab & Metadata)
+### 4.1 Bahagian Head (Browser Tab & Metadata)
 
 Bahagian `<head>` digunakan untuk menetapkan nama portal pada tab browser, favicon logo rasmi, tetapan responsif dan sambungan fail CSS.
 
@@ -65,15 +63,13 @@ Fungsi:
 * Menukar icon browser kepada logo syarikat.
 * Menjadikan laman sesuai di telefon dan desktop.
 
-### Paparan Browser Tab
+#### Paparan Browser Tab
 
-```md
 ![Browser Tab](portaldemoimages/browser-tab.png)
-```
 
 ---
 
-## 4.2 Header dan Navigasi
+### 4.2 Header dan Navigasi
 
 Header digunakan sebagai menu utama portal.
 
@@ -85,13 +81,26 @@ Kod:
 </header>
 ```
 
+#### Paparan Header
+
+![Header](portaldemoimages/header.png)
+
+
 Navigasi sisi:
 
 ```html
 <nav id="menu">
+    ...<h2>Halaman Lain</h2>
+        <ul class="links">
+            <li><a href="index.html">Laman Utama</a></li>
+            <li><a href="generic.html">Perkhidmatan</a></li>
+            <li><a href="elements.html">Mengenai Kami</a></li>
+            <li><a href="#">Harga & Anggaran</a></li>
+            <li><a href="#">Hubungi Kami</a></li>
+        </ul> ...
 ```
 
-Menu mengandungi:
+Menu diubah nama kepada "Halaman Lain" dan mengandungi:
 
 * Laman Utama
 * Perkhidmatan
@@ -99,21 +108,13 @@ Menu mengandungi:
 * Harga & Anggaran
 * Hubungi Kami
 
-### Paparan Header
+#### Paparan Menu
 
-```md
-![Header](portaldemoimages/header-menu.png)
-```
-
-### Paparan Mobile Menu
-
-```md
-![Mobile Menu](portaldemoimages/mobile-menu.png)
-```
+![Menu](portaldemoimages/menu.png)
 
 ---
 
-## 4.3 Hero Banner Utama
+### 4.3 Hero Banner Utama
 
 Hero Banner ialah bahagian pertama yang menarik perhatian pengguna.
 
@@ -131,34 +132,27 @@ Kod:
 <img src="images/logo.jpeg" class="custom-logo">
 ```
 
-Teks utama:
+Teks utama dan subtext:
 
-```text
-Ar-rahnu Prihatin: Solusi Tunai Segera & Patuh Syariah
+```html
+<h2>Ar-rahnu Prihatin: Solusi Tunai Segera & Patuh Syariah</h2>
+<p>Tukarkan Emas Anda Kepada Tunai Dengan Margin Pembiayaan Tertinggi.</p>
 ```
 
-Subteks:
+#### Paparan Banner
 
-```text
-Tukarkan Emas Anda Kepada Tunai Dengan Margin Pembiayaan Tertinggi.
-```
-
-### Paparan Banner
-
-```md
 ![Banner](portaldemoimages/banner-main.png)
-```
 
 ---
 
-## 4.4 Seksyen Kelebihan Utama (Feature Cards)
+### 4.4 Seksyen Kelebihan Utama (Feature Cards)
 
 Bahagian ini menerangkan sebab pelanggan memilih Ar-Rahnu Prihatin.
 
 Kod struktur:
 
 ```html
-<section class="features">
+<section id="wrapper">
 ```
 
 Empat kad utama dibina:
@@ -174,51 +168,57 @@ Setiap kad mempunyai:
 * Tajuk
 * Penerangan ringkas
 
-### Paparan Feature Cards
+#### Paparan Feature Cards
 
-```md
 ![Cards](portaldemoimages/cards-section.png)
-```
 
 ---
 
-## 4.5 Seksyen Spotlight Maklumat
+### 4.5 Seksyen Spotlight Maklumat
 
 Empat seksyen tambahan dibina menggunakan komponen spotlight template.
 
 Kod:
 
 ```html
-<section class="wrapper spotlight style1">
+<section id="one" class="wrapper spotlight style1">...</section>
+<section id="two" class="wrapper alt spotlight style2">...</section>
+<section id="one" class="wrapper spotlight style1">...</section>
+<section id="two" class="wrapper alt spotlight style2">...</section>
 ```
 
 Bahagian yang dibina:
 
-### Perkhidmatan
+#### Perkhidmatan
 
 Menerangkan servis pembiayaan tunai segera.
 
-### Mengenai Kami
+![Spotlight Section](portaldemoimages/services-section.png)
+
+
+#### Mengenai Kami
 
 Penerangan syarikat dan nilai korporat.
 
-### Harga Emas & Rundingan
+![Spotlight Section](portaldemoimages/services-section.png)
+
+
+#### Harga Emas & Rundingan
 
 Maklumat harga emas dan nilai pinjaman.
 
-### Hubungi Kami
+![Spotlight Section](portaldemoimages/services-section.png)
+
+
+#### Hubungi Kami
 
 Maklumat hubungan dan servis pelanggan.
 
-### Paparan Spotlight
-
-```md
 ![Spotlight Section](portaldemoimages/services-section.png)
-```
 
 ---
 
-## 4.6 Footer Portal
+### 4.6 Footer Portal
 
 Footer dibangunkan bagi meletakkan maklumat rasmi syarikat.
 
@@ -236,22 +236,20 @@ Maklumat dimasukkan:
 Kod:
 
 ```html
-<section id="footer">
+<section id="footer">...</section>
 ```
 
-### Paparan Footer
+#### Paparan Footer
 
-```md
 ![Footer](portaldemoimages/footer-section.png)
-```
 
 ---
 
-# 5. Pengubahsuaian CSS
+## 5. Pengubahsuaian CSS
 
 ---
 
-## 5.1 Penyesuaian Logo Banner
+### 5.1 Penyesuaian Logo Banner
 
 Kod:
 
@@ -275,7 +273,7 @@ Fungsi:
 
 ---
 
-## 5.2 Tema Warna Korporat
+### 5.2 Tema Warna Korporat
 
 Warna asal template ditukar kepada identiti syarikat:
 
@@ -297,14 +295,27 @@ Fungsi:
 
 ---
 
-## 5.3 Glitter Animation
+### 5.3 Glitter Animation
 
 Kesan glitter ditambah bagi menyerlahkan elemen premium.
 
 Kod:
 
 ```css
-body::before
+body::before {
+    ...
+    background-image: 
+        radial-gradient(2px 2px at 40px 60px, #D4AF37 50%, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff 50%, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 150px 120px, #cda72a 50%, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 30px 160px, #F1C40F 50%, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 180px 190px, #ffffff 50%, rgba(0,0,0,0)),
+        radial-gradient(2.5px 2.5px at 110px 220px, #D4AF37 50%, rgba(0,0,0,0));
+    ...
+    -webkit-mask-image: linear-gradient(to top, black 0%, black 60%, transparent 80%);
+    mask-image: linear-gradient(to top, black 0%, black 60%, transparent 80%);
+    animation: glitterMove 15s linear infinite;
+}
 ```
 
 Menggunakan:
@@ -316,18 +327,26 @@ Menggunakan:
 Fungsi:
 
 * Menjadikan background lebih hidup.
-* Memberi efek elegan.
+* Memberi efek glitter lebih elegan.
 
 ---
 
-## 5.4 Kad Maklumat Premium
+### 5.4 Kad Maklumat Premium
 
 Kad diubah menggunakan gradient dan border emas.
 
 Kod:
 
 ```css
-.features article
+.features article {
+    padding: 1.75em 1.75em 0.1em 1.75em;
+    background-color: #2a2209; /* Warna asas gelap */
+    background-image: 
+        linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%),
+        linear-gradient(to top, #2a2209 0%, #cda72a 100%);
+    ...
+    border: 1px solid rgba(212, 175, 55, 0.3); 
+}
 ```
 
 Penambahbaikan:
@@ -339,7 +358,7 @@ Penambahbaikan:
 
 ---
 
-## 5.5 Gambar Bulat Spotlight
+### 5.5 Gambar Bulat Spotlight
 
 Kod:
 
@@ -357,7 +376,7 @@ Fungsi:
 
 ---
 
-## 5.6 Responsive Layout
+### 5.6 Responsive Layout
 
 Media query digunakan bagi memastikan portal sesuai untuk:
 
@@ -366,39 +385,36 @@ Media query digunakan bagi memastikan portal sesuai untuk:
 * Tablet
 * Telefon pintar
 
-### Paparan Mobile
+#### Paparan Dekstop dan Mobile
 
-```md
-![Mobile View](portaldemoimages/mobile-view-home.png)
-```
-
----
-
-# 6. Ujian Sistem
-
-Ujian dijalankan bagi memastikan semua komponen berfungsi dengan baik.
-
-| Komponen          | Status |
-| ----------------- | ------ |
-| Browser Tab       | Lulus  |
-| Header Menu       | Lulus  |
-| Mobile Navigation | Lulus  |
-| Banner            | Lulus  |
-| Cards Section     | Lulus  |
-| Spotlight Section | Lulus  |
-| Footer            | Lulus  |
-| Responsive Mobile | Lulus  |
+![Dekstop View](portaldemoimages/footer-section.png)
+![Mobile View](portaldemoimages/footer-section.png)
 
 ---
 
-# 7. Masalah dan Penyelesaian
+## 6. Ujian Sistem
 
-## Isu 1: Logo Tidak Sesuai Dalam Banner
+Beberapa ujian asas telah dijalankan ke atas halaman utama bagi memastikan paparan, navigasi dan keserasian berfungsi dengan baik.
+
+| No | Jenis Ujian | Hasil |
+|----|------------|------|
+| 1 | Nama tab browser & favicon dipaparkan | Berjaya |
+| 2 | Menu navigasi desktop berfungsi | Berjaya |
+| 3 | Menu sisi versi mobile dipaparkan | Berjaya |
+| 4 | Banner utama dipaparkan sempurna | Berjaya |
+| 5 | Kad maklumat tersusun kemas | Berjaya |
+| 6 | Footer memaparkan info syarikat | Berjaya |
+| 7 | Paparan telefon responsif | Berjaya |
+| 8 | Paparan desktop stabil | Berjaya |
+
+## 7. Masalah dan Penyelesaian
+
+### Isu 1: Logo Tidak Sesuai Dalam Banner
 
 **Penyelesaian:**
 Menambah class `.custom-logo` dan kawalan saiz manual.
 
-## Isu 2: Gambar Spotlight Lonjong
+### Isu 2: Gambar Spotlight Lonjong
 
 **Penyelesaian:**
 Menggunakan:
@@ -408,19 +424,19 @@ aspect-ratio: 1/1;
 object-fit: cover;
 ```
 
-## Isu 3: Tema Template Tidak Sesuai
+### Isu 3: Tema Template Tidak Sesuai
 
 **Penyelesaian:**
 Menukar keseluruhan skema warna kepada maroon dan gold.
 
-## Isu 4: Footer Kurang Menarik
+### Isu 4: Footer Kurang Menarik
 
 **Penyelesaian:**
 Membina footer custom dengan icon sosial media dan logo syarikat.
 
 ---
 
-# 8. Rumusan
+## 8. Rumusan
 
 Secara keseluruhannya, pembangunan Laman Utama Portal Ar-Rahnu Prihatin berjaya dilaksanakan dengan baik melalui proses penyesuaian template Solid State kepada identiti korporat syarikat.
 
