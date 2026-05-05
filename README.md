@@ -3,7 +3,7 @@
 
 **Portal Current:** https://ecahxd.github.io/Arrahnu-Official-Portal/
 
-**Pembangun:** SN Azlan (Pelatih Sistem & Data Entry)  
+**Pembangun:** SN Azlan (Intern Sistem & Data Entry)  
 **Lokasi:** Arrahnu Prihatin Pandu Lalu Melaka Raya
 
 ---
