@@ -124,16 +124,6 @@
 
 				});
 
-		/* SERVICE IMAGE SLIDESHOW */
-		const serviceImages = [
-			"images/Perkhidmatan/Melaka_Front.jpg",
-			"images/Perkhidmatan/Melaka_Kaunter1.jpg",
-			"images/Perkhidmatan/Melaka_Kaunter2.jpg",
-			"images/Perkhidmatan/Melaka_Drivethru.jpg"
-		];
-
-		
-
 		$body
 			.on('click', 'a[href="#menu"]', function(event) {
 
@@ -153,6 +143,14 @@
 			});
 
 })(jQuery); // Pastikan fungsi di bawah ini berada di luar penutup ini
+
+/* SERVICE IMAGE SLIDESHOW */
+		const serviceImages = [
+			"images/Perkhidmatan/Melaka_Front.jpg",
+			"images/Perkhidmatan/Melaka_Kaunter1.jpg",
+			"images/Perkhidmatan/Melaka_Kaunter2.jpg",
+			"images/Perkhidmatan/Melaka_Drivethru.jpg"
+		];
 
 let currentServiceImage = 0;
 
