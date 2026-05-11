@@ -132,7 +132,29 @@
 			"images/Perkhidmatan/Melaka_Drivethru.jpg"
 		];
 
-		let currentServiceImage = 0;
+		
+
+		$body
+			.on('click', 'a[href="#menu"]', function(event) {
+
+				event.stopPropagation();
+				event.preventDefault();
+
+				// Toggle.
+					$menu._toggle();
+
+			})
+			.on('keydown', function(event) {
+
+				// Hide on escape.
+					if (event.keyCode == 27)
+						$menu._hide();
+
+			});
+
+})(jQuery); // Pastikan fungsi di bawah ini berada di luar penutup ini
+
+let currentServiceImage = 0;
 
 		const serviceSlideImage = document.getElementById("service-slide-image");
 
@@ -159,29 +181,7 @@
 			}, 4000);
 
 		}		
-
 		
-
-		$body
-			.on('click', 'a[href="#menu"]', function(event) {
-
-				event.stopPropagation();
-				event.preventDefault();
-
-				// Toggle.
-					$menu._toggle();
-
-			})
-			.on('keydown', function(event) {
-
-				// Hide on escape.
-					if (event.keyCode == 27)
-						$menu._hide();
-
-			});
-
-})(jQuery); // Pastikan fungsi di bawah ini berada di luar penutup ini
-
 // Simpan senarai ID dan Nama untuk rujukan arrow
 const tabOrder = ['Jual', 'Cagar', 'Renew', 'Tebus'];
 const tabNames = {
