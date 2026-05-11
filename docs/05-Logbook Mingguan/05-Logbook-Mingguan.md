@@ -46,4 +46,38 @@
 
 ---
 
+### [03/05/2026] - Pengumpulan Data dan Keperluan Modul Perkhidmatan
+- **Aktiviti:** Mengumpul maklumat terperinci berkaitan perkhidmatan yang ditawarkan oleh Ar-Rahnu Prihatin untuk kandungan laman web.
+- **Tindakan:** Menyenaraikan enam perkhidmatan utama iaitu Pajak Gadai Emas, Jual Beli Emas, Tebus Semula Emas, Belian Surat, Tambah/Kurang Nilai, dan Pembaharuan Tempoh. Mengenal pasti fakta-fakta penting bagi setiap perkhidmatan untuk dijadikan deskripsi ringkas.
+
+### [04/05/2026] - Penyediaan Aset Visual dan Kandungan Proses
+- **Aktiviti:** Mencari dan menyediakan bahan media serta menyusun aliran kerja (flowchart) bagi transaksi pelanggan.
+- **Tindakan:** Menguruskan pemilihan imej yang sesuai bagi setiap kategori perkhidmatan. Selain itu, merangka teks langkah demi langkah bagi empat proses utama: Jual Emas, Cagar Emas, Pembaharuan Surat (Renew), dan Tebus Emas bagi memastikan maklumat yang bakal dipaparkan jelas kepada pengguna.
+
+### [05/05/2026] - Permulaan Pembangunan Halaman Perkhidmatan (service.html)
+- **Aktiviti:** Memulakan pengekodan struktur HTML bagi halaman `service.html` menggunakan template Solid State.
+- **Tindakan:** Membina bahagian *Banner* dan *Intro Perkhidmatan*. Melakukan integrasi skrip *slideshow* pada bahagian pengenalan untuk memaparkan imej cawangan Ar-Rahnu secara dinamik. Menyelaras navigasi menu supaya konsisten dengan Laman Utama.
+
+### [06/05/2026] - Pembangunan Seksyen Kad Perkhidmatan dan Responsif Design
+- **Aktiviti:** Membangunkan susun atur kad (features-services) bagi memaparkan enam perkhidmatan utama syarikat.
+- **Tindakan:** Menggunakan elemen `<article>` untuk menstrukturkan setiap perkhidmatan berserta imej dan penerangan. Melakukan pelarasan CSS bagi memastikan grid kad kelihatan kemas dan responsif apabila dibuka melalui peranti mudah alih.
+
+### [07/05/2026] - Integrasi Sistem Tab dan Aliran Proses Transaksi
+- **Aktiviti:** Membangunkan komponen interaktif bagi memaparkan proses transaksi langkah demi langkah.
+- **Tindakan:** Membina sistem tab menggunakan HTML dan CSS bagi membezakan antara proses Jual, Cagar, Renew, dan Tebus. Menambah elemen navigasi khusus untuk paparan mudah alih (*Mobile Tab Navigation*) bagi memudahkan pengguna menukar pandangan proses dengan hanya menekan anak panah.
+
+---
+
+### [09/05/2026] - Pembangunan Seksyen Soalan Lazim (FAQ)
+- **Aktiviti:** Membina bahagian FAQ bagi menjawab kemusykilan lazim pelanggan berkaitan urusan emas.
+- **Tindakan:** Mengkategorikan soalan kepada tiga kumpulan utama: Cagaran, Pembaharuan & Penebusan, serta Dokumen & Transaksi. Melaksanakan elemen *accordion* bagi memastikan paparan FAQ tidak terlalu panjang dan lebih mesra pengguna.
+
+### [10/05/2026] - Dokumentasi Implementasi Kod dan Semakan Akhir
+- **Aktiviti:** Melakukan kemasan akhir pada kod serta menyediakan dokumentasi teknikal bagi Modul Perkhidmatan.
+- **Tindakan:** Melaksanakan ujian fungsi pada sistem tab dan pautan navigasi. Menyediakan fail dokumentasi `04-02-Perkhidmatan.md` yang mengandungi butiran implementasi kod, struktur folder, dan logik di sebalik pembangunan halaman perkhidmatan sebagai rujukan masa hadapan.
+
+### [11/05/2026] - Penyelarasan Visual Akhir dan Penghantaran Laporan Modul
+- **Aktiviti:** Melakukan penyelarasan visual (visual polish) bagi keseluruhan halaman perkhidmatan dan menghantar laporan kepada pihak pengurusan.
+- **Tindakan:** Melakukan pelarasan warna pada teks tajuk (emas/gold) dan memastikan footer mengandungi maklumat yang tepat. Hasil pembangunan Modul Perkhidmatan telah disemak semula sepenuhnya dan dihantar kepada CEO untuk kelulusan. Kini sedang menunggu arahan seterusnya untuk meneruskan pembangunan halaman seterusnya iaitu Mengenai Kami.
+
 
