@@ -2539,6 +2539,80 @@ body::before {
 				width: 100%;
 			}
 
+		/* SERVICE INTRO IMAGE */
+.image.service-slideshow {
+    width: 15em !important;
+    height: 15em !important; /* Paksa height sama untuk 1:1 */
+    aspect-ratio: 1 / 1 !important;
+    overflow: hidden !important; 
+    border-radius: 1.5em !important; /* Bucu bulat sederhana */
+    display: block !important;
+    position: relative;
+    flex-shrink: 0;
+    isolation: isolate; 
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    
+    /* SPACE BETWEEN IMAGE & TEXT */
+    margin-right: 3em !important; /* ini yang control jarak dengan text */
+}
+
+/* IMAGE */
+.image.service-slideshow img,
+.image.left.service-slideshow img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 1.5em !important;
+}
+
+/* DESKTOP */
+.image.left.service-slideshow {
+    float: left !important;
+    max-width: none !important; 
+    margin: 0em 1.5em !important; /* tambah space kanan */
+    padding: 0 !important; 
+    top: 0 !important;
+}
+
+/* MOBILE */
+@media screen and (max-width: 736px) {
+    .image.service-slideshow {
+        width: 9em !important;
+        height: 9em !important;
+        border-radius: 1em !important;
+        
+        /* kecilkan space supaya tak terlalu renggang */
+        margin-right: 1.2em !important;
+    }
+
+    .image.left.service-slideshow {
+        margin: 0.5em 1.5em 0.8em 0 !important;
+    }
+}
+
+/* FORCE LEFT ALIGN + JUSTIFIED TEXT ONLY FOR INTRO SERVICE */
+#intro-service.wrapper.spotlight .inner {
+    flex-direction: row !important; /* cancel row-reverse */
+}
+
+/* TITLE LEFT */
+#intro-service .content h2.major {
+    text-align: left !important;
+}
+
+/* PARAGRAPH JUSTIFIED */
+#intro-service .content p {
+    text-align: justify !important;
+    text-justify: inter-word;
+}
+
+/* OPTIONAL: keep content block clean alignment */
+#intro-service .content {
+    text-align: left !important; /* ensures headings stay left */
+}
+
 /* List */
 
 	ol {
@@ -3858,6 +3932,71 @@ body::before {
 
 	}
 
+	/* Container untuk butang-butang Tab */
+.tab-container {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.125); /* Garis bawah ala Solid State */
+    margin-bottom: 2rem;
+}
+
+/* Style untuk butang Tab */
+.tab-links {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px; /* Supaya border bawah bertindih dengan container */
+}
+
+/* Hover effect untuk butang Tab */
+.tab-links:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Style bila Tab aktif (Dipilih) */
+.tab-links.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff; /* Garis terang tanda aktif */
+}
+
+/* Sembunyikan semua content tab pada mulanya */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+/* Animasi supaya pertukaran tab nampak smooth */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Style untuk list supaya kemas dan senang baca */
+.process-list {
+    margin-left: 1.5rem;
+    line-height: 1.8;
+}
+
+.process-list li {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.process-list li strong {
+    color: #ffffff;
+}
+
+
 	.wrapper {
 		background-color: #9b871c;
 		margin: 6.5em 0;
@@ -3920,37 +4059,245 @@ body::before {
 			width: 55em;
 		}
 
+		/* --- WRAPPER STYLE 2 ONLY --- */
 		.wrapper.style2 {
-			background-color: #353849;
+			background-color: #d5b037;
+			margin: 6.5em 0;
+			position: relative;
 		}
 
-			.wrapper.style2:before, .wrapper.style2:after {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23353849%3B' /%3E%3C/svg%3E");
+			.wrapper.style2:before, 
+			.wrapper.style2:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23d5b037%3B' /%3E%3C/svg%3E");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				content: '';
+				display: block;
+				height: 6.5em;
+				position: absolute;
+				width: 100%;
 			}
 
+			/* Position Dasar */
 			.wrapper.style2:before {
-				box-shadow: inset 0 -1px 0 0 #353849, 0 1px 0 0 #353849;
+				box-shadow: inset 0 -1px 0 0 #d5b037, 0 1px 0 0 #d5b037;
+				left: 0;
+				top: -6.5em;
 			}
 
 			.wrapper.style2:after {
-				box-shadow: inset 0 -1px 0 0 #353849, 0 1px 0 0 #353849;
+				box-shadow: inset 0 -1px 0 0 #d5b037, 0 1px 0 0 #d5b037;
+				bottom: -6.5em;
+				left: 0;
+				transform: scaleY(-1);
+			}
+
+			/* Perubahan Transform Khusus untuk Style 2 (Alt) */
+			.wrapper.style2.alt:before {
+				-moz-transform: scaleX(1);
+				-webkit-transform: scaleX(1);
+				-ms-transform: scaleX(1);
+				transform: scaleX(1);
+			}
+
+			.wrapper.style2.alt:after {
+				-moz-transform: scaleY(-1) scaleX(1);
+				-webkit-transform: scaleY(-1) scaleX(1);
+				-ms-transform: scaleY(-1) scaleX(1);
+				transform: scaleY(-1) scaleX(1);
+			}
+
+			/* Inner padding untuk Style 2 */
+			.wrapper.style2 .inner {
+				padding: 3em 0 1em 0;
+				margin: 0 auto;
+				width: 55em;
+			}
+
+			/* --- PC & TABLET TAB STYLES (LOCKED 4 IN A ROW) --- */
+			.tab-container.pc-only {
+				display: flex;
+				flex-wrap: nowrap;        /* PAKSA 1 baris, haramkan dia melompat ke bawah */
+				width: 100%;
+				background: rgba(0, 0, 0, 0.3);
+				border-radius: 8px;
+				margin-bottom: 2.5em;
+				padding: 5px;
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				overflow: hidden;         /* Pastikan takde bucu butang terkeluar */
+			}
+
+			.tab-links {
+				flex: 1;                  /* Bahagi 4 ruang sama rata (25% setiap satu) */
+				display: flex;            /* Guna flex untuk centering */
+				align-items: center;      /* Center secara menegak (vertical) */
+				justify-content: center;  /* Center secara mendatar (horizontal) */
+				
+				background: transparent;
+				border: none;
+				color: #fff;
+				padding: 15px 10px;       /* Kurangkan padding kiri-kanan sikit supaya muat */
+				cursor: pointer;
+				font-weight: bold;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;    /* Kurangkan sikit spacing supaya muat tablet */
+				font-size: 0.9em;         /* Kecilkan sikit font supaya muat 4 tab dalam tablet */
+				transition: all 0.3s ease;
+				white-space: nowrap;      /* PAKSA text dalam butang satu baris juga */
+			}
+
+			/* Hover & Active Effect */
+			.tab-links:hover {
+				background: rgba(255, 255, 255, 0.1);
+			}
+
+			.tab-links.active {
+				background: rgba(255, 255, 255, 0.15);
+				box-shadow: inset 0 -3px 0 0 #fff;
+			}
+
+			/* --- KHUSUS UNTUK TABLET (Skrin sederhana) --- */
+			@media screen and (max-width: 1024px) and (min-width: 737px) {
+				.tab-links {
+					font-size: 0.75em;     /* Kecilkan lagi font bila kat tablet supaya tak sesak */
+					padding: 12px 5px;
+				}
+			}
+
+			/* --- MOBILE (Phone sahaja baru tukar jadi Arrow) --- */
+			@media screen and (max-width: 736px) {
+				.pc-only {
+					display: none !important;
+				}
+				.mobile-tab-nav {
+					display: flex;
+				}
+			}
+
+			/* --- TAB CONTENT CENTERED --- */
+			.tab-content {
+				text-align: center;      /* Centerkan semua tajuk dan text */
+				width: 100%;
+				animation: fadeIn 0.5s ease;
+			}
+
+			/* Centerkan list (ol) supaya tak nampak senget ke kiri */
+			.process-list {
+				display: inline-block;   /* Supaya boleh di-centerkan oleh parent */
+				text-align: left;        /* Tapi text dalam list tetap rata kiri supaya senang baca */
+				max-width: 800px;        /* Hadkan lebar supaya tak meleret sangat kat skrin besar */
+				margin: 2em auto;        /* Centerkan block list tu */
+			}
+
+			@keyframes fadeIn {
+				from { opacity: 0; transform: translateY(10px); }
+				to { opacity: 1; transform: translateY(0); }
+			}
+
+			/* --- MOBILE ADJUSTMENT (RE-FIX) --- */
+			@media screen and (max-width: 736px) {
+				.pc-only {
+					display: none !important;
+				}
+				
+				/* Guna gaya arrow yang kau dah ada tadi */
+				.mobile-tab-nav {
+					display: flex;
+				}
+				
+				.process-list {
+					display: block; /* Kat phone biar dia penuh skrin */
+					text-align: left;
+				}
+			}
+
+
+			/* --- MOBILE TAB NAV STYLES --- */
+			.mobile-tab-nav {
+				display: none; /* Sembunyi kat PC */
+				align-items: center;
+				justify-content: space-between;
+				background: rgba(0, 0, 0, 0.2);
+				border: 1px solid rgba(255, 255, 255, 0.3);
+				border-radius: 8px;
+				margin-bottom: 2em;
+				padding: 5px;
+			}
+
+			#mobile-tab-label {
+				font-weight: bold;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-size: 1.1em;
+				color: #fff;
+			}
+
+			.nav-arrow {
+				background: none;
+				border: none;
+				color: #fff;
+				font-size: 1.5em;
+				cursor: pointer;
+				padding: 0 15px;
+				transition: transform 0.2s;
+			}
+
+			.nav-arrow:active {
+				transform: scale(0.8);
+				color: #000; /* Feedback bila tekan */
+			}
+
+			/* --- MEDIA QUERIES --- */
+			@media screen and (max-width: 736px) {
+				.pc-only {
+					display: none !important;
+				}
+
+				.mobile-tab-nav {
+					display: flex; /* Tunjuk kat Phone */
+				}
+
+				/* Pastikan text dalam tab wrap dengan betul */
+				.tab-content {
+					width: 100%;
+					padding: 0 !important;
+				}
+				
+				.process-list {
+					padding-left: 1.2em; /* Bagi ruang untuk nombor list */
+				}
 			}
 
 		.wrapper.style3 {
-			background-color: #3d4051;
+			background-color: #bb9e40;
 		}
 
 			.wrapper.style3:before, .wrapper.style3:after {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%233d4051%3B' /%3E%3C/svg%3E");
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23bb9e40%3B' /%3E%3C/svg%3E");
 			}
 
 			.wrapper.style3:before {
-				box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051;
+				box-shadow: inset 0 -1px 0 0 #bb9e40, 0 1px 0 0 #bb9e40;
 			}
 
 			.wrapper.style3:after {
-				box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051;
+				box-shadow: inset 0 -1px 0 0 #bb9e40, 0 1px 0 0 #bb9e40;
 			}
+
+			/* Custom Transform khusus untuk Spotlight Style 2 */
+				.wrapper.style3:before {
+					-moz-transform: scaleX(-1);
+					-webkit-transform: scaleX(-1);
+					-ms-transform: scaleX(-1);
+					transform: scaleX(-1);
+				}
+
+				.wrapper.style3:after {
+					-moz-transform: scaleY(-1) scaleX(-1);
+					-webkit-transform: scaleY(-1) scaleX(-1);
+					-ms-transform: scaleY(-1) scaleX(-1);
+					transform: scaleY(-1) scaleX(-1);
+				}
 
 		.wrapper.style4 {
 			background-color: #454858;
@@ -4081,6 +4428,21 @@ body::before {
 					box-shadow: inset 0 -1px 0 0 #bb9e40, 0 1px 0 0 #bb9e40;
 				}
 
+				/* Custom Transform khusus untuk Spotlight Style 2 */
+				.wrapper.spotlight.style2:before {
+					-moz-transform: scaleX(-1);
+					-webkit-transform: scaleX(-1);
+					-ms-transform: scaleX(-1);
+					transform: scaleX(-1);
+				}
+
+				.wrapper.spotlight.style2:after {
+					-moz-transform: scaleY(-1) scaleX(-1);
+					-webkit-transform: scaleY(-1) scaleX(-1);
+					-ms-transform: scaleY(-1) scaleX(-1);
+					transform: scaleY(-1) scaleX(-1);
+				}
+
 			.wrapper.spotlight.style3 {
 				background-color: #d5b037;
 			}
@@ -4145,102 +4507,211 @@ body::before {
 					box-shadow: inset 0 -1px 0 0 #2d3a69, 0 1px 0 0 #2d3a69;
 				}
 
+		/* --- RESPONSIVE ADJUSTMENTS FOR ALL WRAPPERS --- */
 		@media screen and (max-width: 980px) {
-
-			.wrapper {
+			.wrapper, .wrapper.style2 {
 				margin: 4.75em 0;
 			}
 
-				.wrapper:before, .wrapper:after {
-					height: 4.75em;
-				}
+			.wrapper:before, .wrapper:after,
+			.wrapper.style2:before, .wrapper.style2:after {
+				height: 4.75em;
+			}
 
-				.wrapper:before {
-					top: -4.75em;
-				}
+			.wrapper:before, .wrapper.style2:before {
+				top: -4.75em;
+			}
 
-				.wrapper:after {
-					bottom: -4.75em;
-					left: 0;
-				}
+			.wrapper:after, .wrapper.style2:after {
+				bottom: -4.75em;
+				left: 0;
+			}
 
-				.wrapper .inner {
-					padding: 3em 3em 1em 3em ;
-					width: 100%;
-				}
+			.wrapper .inner, .wrapper.style2 .inner {
+				padding: 3em 3em 1em 3em;
+				width: 100% !important; /* Paksa lebar 100% */
+			}
 
-				.wrapper.spotlight .image {
-					margin: 0 2em 2em 0;
-					width: 32em;
-				}
+			.wrapper.spotlight .image {
+				margin: 0 2em 2em 0;
+				width: 15em;
+			}
 
-				.wrapper.spotlight:nth-child(2n - 1) .image {
-					margin: 0 0 2em 2em;
-				}
-
+			.wrapper.spotlight:nth-child(2n - 1) .image {
+				margin: 0 0 2em 2em;
+			}
 		}
 
 		@media screen and (max-width: 736px) {
-
-			.wrapper {
+			.wrapper, .wrapper.style2 {
 				margin: 2.5em 0;
 			}
 
-				.wrapper:before, .wrapper:after {
-					height: 2.5em;
-				}
+			.wrapper:before, .wrapper:after,
+			.wrapper.style2:before, .wrapper.style2:after {
+				height: 2.5em;
+			}
 
-				.wrapper:before {
-					top: -2.5em;
-				}
+			.wrapper:before, .wrapper.style2:before {
+				top: -2.5em;
+			}
 
-				.wrapper:after {
-					bottom: -2.5em;
-					left: 0;
-				}
+			.wrapper:after, .wrapper.style2:after {
+				bottom: -2.5em;
+			}
 
-				.wrapper .inner {
-					padding: 2em 2em 0.1em 2em ;
-				}
+			.wrapper .inner, .wrapper.style2 .inner {
+				padding: 2em 2em 0.1em 2em;
+			}
 
-				.wrapper.spotlight .inner {
-					-moz-align-items: -moz-flex-start;
-					-webkit-align-items: -webkit-flex-start;
-					-ms-align-items: -ms-flex-start;
-					align-items: flex-start;
-				}
+			.wrapper.spotlight .image {
+				width: 19em;
+				margin: 0 1.75em 2em 0;
+			}
 
-				.wrapper.spotlight .image {
-					width: 19em;
-					margin: 0 1.75em 2em 0;
-				}
-
-				.wrapper.spotlight:nth-child(2n - 1) .image {
-					margin: 0 0 2em 1.75em;
-				}
-
+			.wrapper.spotlight:nth-child(2n - 1) .image {
+				margin: 0 0 2em 1.75em;
+			}
+			
+			/* --- TAB TO DROPDOWN FIX --- */
+			.pc-only { display: none !important; }
+			.tab-dropdown-container { display: block; margin-bottom: 2em; }
+			#tab-selector { width: 100%; padding: 10px; background: rgba(0,0,0,0.5); color: #fff; }
 		}
 
 		@media screen and (max-width: 480px) {
-
 			.wrapper.spotlight .inner {
 				display: block;
 			}
 
 			.wrapper.spotlight .image {
-				margin: 0 0 1em 0 !important;
+				margin: 0 1em !important;
 				max-width: 85%;
 				width: 12em;
 			}
-
 		}
 
 		@media screen and (max-width: 360px) {
+			.wrapper .inner, .wrapper.style2 .inner {
+				padding: 2em 1.5em 0.1em 1.5em;
+			}
+		}
 
-			.wrapper .inner {
-				padding: 2em 1.5em 0.1em 1.5em ;
+/* --- FAQ ACCORDION STYLES --- */
+		.faq-accordion {
+			margin-top: 2em;
+		}
+
+		.faq-category-title {
+			font-size: 1.2em;
+			color: #ffd857; 
+			margin: 2em 0 1em 0;
+			border-left: 4px solid #ffd857;
+			padding-left: 15px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+		.faq-item {
+			background: rgba(255, 255, 255, 0.05);
+			margin-bottom: 0.5em;
+			border-radius: 4px;
+			overflow: hidden;
+			transition: all 0.3s ease;
+		}
+
+/* --- FAQ ACCORDION STYLES (FULL UPDATED) --- */
+		.faq-question {
+			width: 100%;
+			background: none;
+			border: none;
+			color: #ffffff;
+			font-weight: 700;
+			cursor: pointer;
+			outline: none;
+
+			/* LAYOUT: Centered in box but text align left */
+			display: flex;
+			justify-content: space-between;
+			align-items: center;      /* Center secara menegak */
+			text-align: left;         /* Teks tetap rata kiri */
+			gap: 20px;
+
+			/* DESKTOP SETTINGS */
+			/* Padding: 1.5em (Atas/Bawah) | 1.5em (Kiri/Kanan) */
+			padding: 1.5em 1.5em; 
+			font-size: 1.1em;
+			line-height: 1.5;         /* Tambah ruang antara baris teks */
+			white-space: normal;
+			transition: background 0.3s ease;
+		}
+
+		.faq-question:after {
+			content: '+';
+			font-size: 1.4em;
+			color: #ffd857;
+			transition: transform 0.3s ease;
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		/* --- RESPONSIVE FONT & MOBILE ADJUSTMENT --- */
+		@media screen and (max-width: 736px) {
+			.faq-question {
+				/* MOBILE FONT SETTINGS */
+				font-size: 0.85em;
+				
+				/* 1em (Atas/Bawah) supaya ada ruang | 1em (Kiri/Kanan) */
+				padding: 2.5em 1em; 
+				
+				/* Line height lebih luas sikit supaya soalan 2 baris tak nampak sempit */
+				line-height: 1.4; 
 			}
 
+			.faq-category-title {
+				font-size: 1em;
+				margin: 1.5em 0 0.8em 0;
+			}
+		}
+
+		/* --- FAQ ITEM STATES --- */
+		.faq-item.active .faq-question {
+			background: rgba(212, 175, 55, 0.1);
+		}
+
+		.faq-item.active .faq-question:after {
+			content: '-';
+			transform: rotate(180deg);
+		}
+
+		/* --- ANSWER BOX (STAY PERFECT) --- */
+		.faq-answer {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.3s ease-out;
+			background: rgba(0, 0, 0, 0.1);
+		}
+
+		.faq-answer p {
+			padding: 1.5em; /* Kekalkan padding asal yang kau kata dah perfect */
+			margin: 0;
+			font-size: 0.95em;
+			line-height: 1.6;
+			color: rgba(255, 255, 255, 0.8);
+		}
+
+		@media screen and (max-width: 736px) {
+			.faq-answer p {
+				padding: 1.2em 1em;
+				font-size: 0.85em;
+			}
+		}
+
+		/* --- OPTIONAL: FAQ GROUP SPACING --- */
+		.faq-group {
+			margin-bottom: 1.5em;
 		}
 
 /* Footer */

@@ -124,6 +124,44 @@
 
 				});
 
+		/* SERVICE IMAGE SLIDESHOW */
+		const serviceImages = [
+			"images/Perkhidmatan/Melaka_Front.jpg",
+			"images/Perkhidmatan/Melaka_Kaunter1.jpg",
+			"images/Perkhidmatan/Melaka_Kaunter2.jpg",
+			"images/Perkhidmatan/Melaka_Drivethru.jpg"
+		];
+
+		let currentServiceImage = 0;
+
+		const serviceSlideImage = document.getElementById("service-slide-image");
+
+		if (serviceSlideImage) {
+
+			setInterval(() => {
+
+				serviceSlideImage.style.opacity = 0;
+
+				setTimeout(() => {
+
+					currentServiceImage++;
+
+					if (currentServiceImage >= serviceImages.length) {
+						currentServiceImage = 0;
+					}
+
+					serviceSlideImage.src = serviceImages[currentServiceImage];
+
+					serviceSlideImage.style.opacity = 1;
+
+				}, 400);
+
+			}, 4000);
+
+		}		
+
+		
+
 		$body
 			.on('click', 'a[href="#menu"]', function(event) {
 
@@ -142,4 +180,95 @@
 
 			});
 
-})(jQuery);
+})(jQuery); // Pastikan fungsi di bawah ini berada di luar penutup ini
+
+// Simpan senarai ID dan Nama untuk rujukan arrow
+const tabOrder = ['Jual', 'Cagar', 'Renew', 'Tebus'];
+const tabNames = {
+    'Jual': 'Jual Emas',
+    'Cagar': 'Cagar Emas',
+    'Renew': 'Pembaharuan Surat',
+    'Tebus': 'Tebus Emas'
+};
+let currentTabIndex = 0;
+
+// Fungsi Asal (PC)
+function openFlow(evt, flowName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tab-links");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(flowName).style.display = "block";
+    evt.currentTarget.className += " active";
+    
+    // Update index untuk sinkron dengan mobile
+    currentTabIndex = tabOrder.indexOf(flowName);
+    document.getElementById('mobile-tab-label').innerText = tabNames[flowName];
+}
+
+// Fungsi Baru untuk Arrow (Mobile)
+function shiftTab(direction) {
+    currentTabIndex += direction;
+
+    // Loop balik kalau dah sampai hujung
+    if (currentTabIndex >= tabOrder.length) currentTabIndex = 0;
+    if (currentTabIndex < 0) currentTabIndex = tabOrder.length - 1;
+
+    const newFlow = tabOrder[currentTabIndex];
+    
+    // Tukar Label
+    document.getElementById('mobile-tab-label').innerText = tabNames[newFlow];
+    
+    // Tukar Content (Guna logik yang sama macam openFlow tapi tanpa 'event')
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    document.getElementById(newFlow).style.display = "block";
+
+    // Sinkronkan class active kat butang PC (sekiranya user resize screen)
+    tablinks = document.getElementsByClassName("tab-links");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+        if (tablinks[i].getAttribute('onclick').includes(newFlow)) {
+            tablinks[i].classList.add("active");
+        }
+    }
+}
+
+// FAQ Accordion Logic
+document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            const faqAnswer = question.nextElementSibling;
+
+            // Tutup soalan lain yang tengah terbuka (Optional - Single Open)
+            /*
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                }
+            });
+            */
+
+            // Toggle active class
+            faqItem.classList.toggle('active');
+
+            if (faqItem.classList.contains('active')) {
+                faqAnswer.style.maxHeight = faqAnswer.scrollHeight + "px";
+            } else {
+                faqAnswer.style.maxHeight = null;
+            }
+        });
+    });
+});
