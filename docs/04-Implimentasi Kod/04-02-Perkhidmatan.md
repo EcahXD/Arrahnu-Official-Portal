@@ -68,6 +68,7 @@ Kod:
 ```
 
 #### Paparan Pengenalan Perkhidmatan
+![Pengenalan Perkhidmatan](portaldemoimages/perkhidmatanpengenalan.png)
 
 ---
 
@@ -89,6 +90,7 @@ Kod struktur:
 ```
 
 #### Paparan Kad Perkhidmatan
+![Perkhidmatan Cards](portaldemoimages/perkhidmatancards.png)
 
 ---
 
@@ -126,7 +128,11 @@ Kod:
 </section>
 ```
 
-#### Paparan Proses Transaksi
+#### Paparan Proses Transaksi (Dekstop)
+![Proses Transaksi](portaldemoimages/prosestransaksid.png)
+
+#### Paparan Proses Transaksi (Mobile)
+![Proses Transaksi](portaldemoimages/prosestransaksim.png)
 
 ---
 
@@ -156,6 +162,7 @@ Kod:
 ```
 
 #### Paparan Soalan Lazim
+![Soalan Lazim](portaldemoimages/soalanlazim.png)
 
 ---
 
