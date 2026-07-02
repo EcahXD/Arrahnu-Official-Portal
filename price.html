@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ar-rahnu Prihatin Pandu Lalu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="icon" type="image/png" href="images/Logo 3d.png">
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Ar-rahnu Prihatin</a></h1>
+						<nav>
+							<a href="#menu">Halaman Lain</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Halaman Lain</h2>
+							<ul class="links">
+								<li><a href="index.html">Laman Utama</a></li>
+								<li><a href="service.html">Perkhidmatan</a></li>
+								<li><a href="about.html">Mengenai Kami</a></li>
+								<li><a href="price.html">Harga & Anggaran</a></li>
+								<li><a href="contact.html">Hubungi Kami</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>Harga & Anggaran</h2>
+							<p>Gunakan kalkulator ini untuk anggaran nilai emas dan kos upah simpan. Nilai ini adalah anggaran kasar sahaja. Untuk penilaian sebenar dan pengiraan tepat, sila kunjungi cawangan Ar-Rahnu Prihatin berdekatan.</p>
+						</div>
+					</section>
+
+					<!-- Profil Syarikat -->
+					<section id="harga-semasa" class="wrapper">
+						<div class="inner">
+							<h3 class="major">Semak Harga Emas Semasa Hari Ini</h3>
+							<div class="a4-poster-wrapper">
+								<div class="a4-poster">
+									<img src="images/Harga Emas/Harga Emas Terkini.jpeg" 
+										class="zoomable" 
+										alt="Poster Harga Emas" />
+								</div>
+								<p style="text-align: center; margin-top: 1em;"><i>Klik gambar untuk zoom. Imbas kod QR untuk harga terkini.</i></p>
+							</div>
+						</div>
+
+						<div id="image-lightbox" class="lightbox-overlay">
+										<span class="lightbox-close">&times;</span>
+										<img class="lightbox-img" src="" alt="Zoomed Price">
+									</div>
+					</section>
+
+					<section id="anggaran-harga" class="wrapper alt style3">
+						<div class="inner">
+							<h3 class="major">Semak Anggaran Harga Emas</h3>
+							<div class="calculator-form">
+								<form id="gold-calculator">
+									<div class="row gtr-uniform">
+										<div class="col-12">
+											<label>Berat Emas (Gram)</label>
+											<input type="number" id="weight" placeholder="Contoh: 10.5" required />
+										</div>
+										<div class="col-12">
+											<label>Ketulenan Emas</label>
+											<select id="purity">
+												<option value="0.999">999 / 24K</option>
+												<option value="0.916">916 / 22K</option>
+												<option value="0.835">835 / 20K</option>
+												<option value="0.750">750 / 18K</option>
+											</select>
+										</div>
+										<div class="col-12">
+											<ul class="actions">
+												<li><button type="button" class="primary" onclick="calculate()">KIRA</button></li>
+												<li><button type="reset" onclick="resetForm()">SET SEMULA</button></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+
+								<div id="result-section" style="display: none; margin-top: 2em;">
+									<hr />
+									<div class="row gtr-uniform">
+										<div class="col-12"><label>Jumlah Berat (Gram):</label><input type="text" id="out-weight" disabled /></div>
+										<div class="col-12"><label>Harga Anggaran Kasar (RM):</label><input type="text" id="out-price" disabled /></div>
+										<div class="col-12"><label>Upah Simpan Sebulan (RM):</label><input type="text" id="out-upah" disabled /></div>
+									</div>
+
+									<div class="table-wrapper" style="margin-top: 2em;">
+										<table class="alt">
+											<thead><tr><th>Tarikh Mula</th><th>Tarikh Matang</th><th>Total Upah</th><th>Penebusan</th></tr></thead>
+											<tbody><tr><td id="tbl-start">-</td><td id="tbl-end">-</td><td id="tbl-upah">-</td><td id="tbl-total">-</td></tr></tbody>
+										</table>
+									</div>
+									<p><i>*Untuk pengiraan tepat, sila ke cawangan Ar-Rahnu Prihatin berdekatan.</i></p>
+								</div>
+							</div>
+						</div>
+					</section>
+								
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">AR-RAHNU PRIHATIN SDN. BHD.</h2>
+						
+						<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 2em; margin-bottom: 3em;">
+							
+							<div style="flex: 1; min-width: 250px;">
+								<h3 style="font-size: 0.8em; letter-spacing: 2px; color: #d4af37;">LOKASI HQ</h3>
+								<p style="font-size: 0.95em; line-height: 1.6;">
+									<strong>Ar-rahnu Prihatin Jitra</strong> <br />
+									Complex Kompleks Jitra Lama, <br />
+									No. 2, Jalan Jitra, <br />
+									Pekan Jitra, <br />
+									06000 Jitra, Kedah.
+								</p>
+							</div>
+
+							<div style="flex: 1; min-width: 250px;">
+								<h3 style="font-size: 0.8em; letter-spacing: 2px; color: #d4af37;">TALIAN BANTUAN & OPERASI</h3>
+								<ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95em;">
+									<li style="margin-bottom: 1em; display: flex; align-items: center;">
+										<i class="icon solid fa-phone" style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 1px solid #fff; border-radius: 50%; margin-right: 15px; font-size: 0.8em; flex-shrink: 0;"></i>
+										<span>Toll Free: 1-800-22-1199</span>
+									</li>
+									<li style="margin-bottom: 1em; display: flex; align-items: center;">
+										<i class="icon solid fa-phone" style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 1px solid #fff; border-radius: 50%; margin-right: 15px; font-size: 0.8em; flex-shrink: 0;"></i>
+										<span>Tel: 04-917 1199</span>
+									</li>
+									<li style="display: flex; align-items: center;">
+										<i class="icon solid fa-clock" style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 1px solid #fff; border-radius: 50%; margin-right: 15px; font-size: 0.8em; flex-shrink: 0;"></i>
+										<span>Dibuka Setiap Hari (Kecuali Jumaat & Cuti Am)<br><small>9:00 AM - 5:30 PM</small></span>
+									</li>
+								</ul>
+							</div>
+
+							<div style="flex: 1; min-width: 200px;">
+								<h3 style="font-size: 0.8em; letter-spacing: 2px; color: #d4af37;">IKUTI KAMI</h3>
+								<div style="display: flex; gap: 15px;">
+									<a href="#" class="icon brands fa-facebook-f" style="display: inline-flex; align-items: center; justify-content: center; width: 35px; height: 35px; border: 1px solid #fff; border-radius: 50%; text-decoration: none; border-bottom: none;"><span class="label">Facebook</span></a>
+									<a href="#" class="icon brands fa-tiktok" style="display: inline-flex; align-items: center; justify-content: center; width: 35px; height: 35px; border: 1px solid #fff; border-radius: 50%; text-decoration: none; border-bottom: none;"><span class="label">TikTok</span></a>
+								</div>
+							</div>
+						</div>
+
+						<hr style="border-color: rgba(255, 255, 255, 0.1); margin-bottom: 1.5em;" />
+
+						<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1em; font-size: 0.75em; opacity: 0.8;">
+							<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+								<span>&copy; 2026 Ar-rahnu Prihatin. Hak Cipta Terpelihara.</span>
+								<!-- Attribution Credits (Internal Reference Only)
+									Design: HTML5 UP (html5up.net) | Licensed under CCA 3.0
+								-->
+								<span class="desktop-only">|</span>
+								<span>Dev: <a href="https://www.linkedin.com/in/siti-nor-aisyah-mohd-azlan-775612323/" target="_blank" style="border-bottom: none;">SN Azlan @ Team Melaka Raya</a></span>
+							</div>
+
+							<div>
+								<img src="images/LamanUtama/Logo 3d.png" alt="Ar-rahnu Prihatin" style="height: 40px; width: auto; object-fit: contain;" />
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
