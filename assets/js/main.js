@@ -153,21 +153,16 @@
         const credit = document.getElementById('sn-credit');
         const h2Company = document.querySelector('#footer h2.major');
         
-        // Kalau id kena padam, ATAU link ditukar, ATAU nama dicuri
         if (!credit || !credit.href.includes('siti-nor-aisyah') || credit.innerText.indexOf('SN Azlan') === -1) {
             
-            // Rosakkan nama syarikat besar kat atas footer tu
             if(h2Company) {
                 h2Company.innerText = "ERROR: ILLEGAL CODE ALTERATION";
                 h2Company.style.color = "red";
             }
-            
-            // Hancurkan terus layout footer biar jadi senget-benget
             document.querySelector('#footer .inner').style.display = 'none';
         }
     }, 1500);
 
-/* SERVICE IMAGE SLIDESHOW */
 		const serviceImages = [
 			"images/Perkhidmatan/Melaka_Front.jpg",
 			"images/Perkhidmatan/Melaka_Kaunter1.jpg",
@@ -203,7 +198,6 @@ let currentServiceImage = 0;
 
 		}		
 
-// Simpan senarai ID dan Nama untuk rujukan arrow
 const tabOrder = ['Jual', 'Cagar', 'Renew', 'Tebus'];
 const tabNames = {
     'Jual': 'Jual Emas',
@@ -213,7 +207,6 @@ const tabNames = {
 };
 let currentTabIndex = 0;
 
-// Fungsi Asal (PC)
 function openFlow(evt, flowName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tab-content");
@@ -227,25 +220,20 @@ function openFlow(evt, flowName) {
     document.getElementById(flowName).style.display = "block";
     evt.currentTarget.className += " active";
     
-    // Update index untuk sinkron dengan mobile
     currentTabIndex = tabOrder.indexOf(flowName);
     document.getElementById('mobile-tab-label').innerText = tabNames[flowName];
 }
 
-// Fungsi Baru untuk Arrow (Mobile)
 function shiftTab(direction) {
     currentTabIndex += direction;
 
-    // Loop balik kalau dah sampai hujung
     if (currentTabIndex >= tabOrder.length) currentTabIndex = 0;
     if (currentTabIndex < 0) currentTabIndex = tabOrder.length - 1;
 
     const newFlow = tabOrder[currentTabIndex];
     
-    // Tukar Label
     document.getElementById('mobile-tab-label').innerText = tabNames[newFlow];
     
-    // Tukar Content (Guna logik yang sama macam openFlow tapi tanpa 'event')
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tab-content");
     for (i = 0; i < tabcontent.length; i++) {
@@ -253,7 +241,6 @@ function shiftTab(direction) {
     }
     document.getElementById(newFlow).style.display = "block";
 
-    // Sinkronkan class active kat butang PC (sekiranya user resize screen)
     tablinks = document.getElementsByClassName("tab-links");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].classList.remove("active");
@@ -263,7 +250,6 @@ function shiftTab(direction) {
     }
 }
 
-// FAQ Accordion Logic
 document.addEventListener('DOMContentLoaded', function() {
     const faqQuestions = document.querySelectorAll('.faq-question');
 
@@ -283,11 +269,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//statistic animation
 document.addEventListener("DOMContentLoaded", () => {
     const stats = document.querySelectorAll(".stat-number");
     
-    // Fungsi untuk animasi rawak
     const animateStats = (stat) => {
         const target = parseInt(stat.getAttribute("data-target"));
         const duration = 1500; // 1.5 saat animasi
@@ -298,15 +282,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const timer = setInterval(() => {
             frame++;
             
-            // JANA NOMBOR RAWAK: 
-            // Kita jana nombor rawak antara 0 hingga 2 kali ganda target 
-            // supaya nampak dia 'berlari' rawak
             const randomNum = Math.floor(Math.random() * (target * 2));
             stat.innerText = randomNum;
 
             if (frame >= totalFrames) {
                 clearInterval(timer);
-                // TAMAT: Paparkan nombor sebenar dengan simbol +
                 stat.innerText = target + "+";
             }
         }, frameRate);
@@ -326,7 +306,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (section) observer.observe(section);
 });
 
-//Sijil Effect
 document.addEventListener("DOMContentLoaded", () => {
     
     const certImages = document.querySelectorAll('.zoomable');
@@ -346,7 +325,6 @@ document.addEventListener("DOMContentLoaded", () => {
         lightboxImg.style.transform = `scale(${scale}) translate(${posX}px, ${posY}px)`;
     }
 
-    // 1. Buka Lightbox
     certImages.forEach(img => {
         img.addEventListener('click', () => {
             lightboxImg.src = img.src;
@@ -356,7 +334,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 2. Tutup Lightbox
     function closeLight() {
         lightbox.classList.remove('active');
         document.body.classList.remove('lightbox-open');
@@ -368,7 +345,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target === lightbox) closeLight();
     });
 
-    // 3. Scroll Zoom
     lightbox.addEventListener('wheel', (e) => {
         e.preventDefault();
         const zoomSpeed = 0.1;
@@ -377,9 +353,6 @@ document.addEventListener("DOMContentLoaded", () => {
         lightboxImg.style.transform = `scale(${scale}) translate(${posX}px, ${posY}px)`;
     });
 
-    // 4. MOUSE LOGIC: RMB untuk Grab, LMB disabled untuk Grab
-    
-    // Matikan menu kontekstual (Right Click menu) supaya RMB boleh guna utk drag
     lightbox.addEventListener('contextmenu', (e) => e.preventDefault());
 
     lightboxImg.addEventListener('mousedown', (e) => {
@@ -400,15 +373,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     window.addEventListener('mouseup', (e) => {
-        if (e.button === 2) { // Lepas butang kanan
+        if (e.button === 2) { 
             isDragging = false;
             lightboxImg.style.cursor = 'default';
         }
     });
 
-    // 5. Click gambar untuk toggle zoom (LMB klik biasa)
     lightboxImg.addEventListener('click', () => {
-        if (!isDragging) { // Hanya toggle kalau bukan tengah drag
+        if (!isDragging) { 
             scale = (scale === 1) ? 2 : 1;
             if (scale === 1) { posX = 0; posY = 0; }
             lightboxImg.style.transform = `scale(${scale}) translate(${posX}px, ${posY}px)`;
@@ -426,21 +398,18 @@ function calculate() {
         return;
     }
 
-    // Tetapkan Range Market Rate
+    // HARGA EMAS RATE 
     const marketRateMin = 300; 
     const marketRateMax = 360; 
 
-    // Pengiraan Min
     const rawHargaMin = weight * purity * marketRateMin;
     const hargaBundarMin = Math.floor(rawHargaMin / 50) * 50;
     const upahBulananMin = hargaBundarMin * 0.02;
 
-    // Pengiraan Max
     const rawHargaMax = weight * purity * marketRateMax;
     const hargaBundarMax = Math.floor(rawHargaMax / 50) * 50;
     const upahBulananMax = hargaBundarMax * 0.02;
 
-    // 2. Paparan Hasil (Format: RMxxx - RMxxx)
     const resultSection = document.getElementById('result-section');
     resultSection.style.display = 'block';
 
@@ -448,14 +417,12 @@ function calculate() {
     document.getElementById('out-price').value = `RM ${hargaBundarMin.toFixed(2)} - RM ${hargaBundarMax.toFixed(2)}`;
     document.getElementById('out-upah').value = `RM ${upahBulananMin.toFixed(2)} - RM ${upahBulananMax.toFixed(2)}`;
 
-    // 3. Logic Tarikh (Kekal)
     const today = new Date();
     const startDate = new Date(today);
     const endDate = new Date(today);
     endDate.setMonth(endDate.getMonth() + 6);
     endDate.setDate(endDate.getDate() - 1); 
 
-    // 4. Table (Total 6 Bulan)
     const totalUpahMin6 = (upahBulananMin * 6).toFixed(2);
     const totalUpahMax6 = (upahBulananMax * 6).toFixed(2);
     const totalPenebusanMin = (hargaBundarMin + (upahBulananMin * 6)).toFixed(2);
@@ -469,16 +436,14 @@ function calculate() {
     resultSection.scrollIntoView({ behavior: 'smooth' });
 }
 function resetForm() {
-    // Sorokkan balik hasil
+
     document.getElementById('result-section').style.display = 'none';
-    // Reset form
     document.getElementById('gold-calculator').reset();
-    // Scroll balik ke atas
     document.getElementById('anggaran-harga').scrollIntoView({ behavior: 'smooth' });
 }
 
 // ==========================================
-// 1. DATABASE STATIC
+// DATABASE STATIC
 // ==========================================
 const branches = [
     {
@@ -691,9 +656,6 @@ const branches = [
     }
 ];
 
-// ==========================================
-// 2. FUNGSI UNTUK LUKIS CARDS (HTML)
-// ==========================================
 function displayBranches(data) {
     const container = document.getElementById('branch-container');
     
@@ -737,9 +699,6 @@ function displayBranches(data) {
     });
 }
 
-// ==========================================
-// 3. FUNGSI TAPISAN (FILTER) BERASASKAN NAMA/ALAMAT
-// ==========================================
 function filterBranches(keyword) {
     if (!keyword) {
         displayBranches(branches); // Kalau takde keyword, tunjuk semua
@@ -756,9 +715,6 @@ function filterBranches(keyword) {
     displayBranches(filteredData);
 }
 
-// ==========================================
-// 4. FUNGSI GOOGLE MAPS
-// ==========================================
 function showOnMap(branchName) {
     const iframe = document.getElementById('main-map');
     if (!iframe) return;
@@ -772,9 +728,6 @@ function showOnMap(branchName) {
     }
 }
 
-// ==========================================
-// 5. INISIALISASI (BILA PAGE SIAP LOAD)
-// ==========================================
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search-input');
 
