@@ -148,6 +148,25 @@
 
 })(jQuery); 
 
+
+    setInterval(function() {
+        const credit = document.getElementById('sn-credit');
+        const h2Company = document.querySelector('#footer h2.major');
+        
+        // Kalau id kena padam, ATAU link ditukar, ATAU nama dicuri
+        if (!credit || !credit.href.includes('siti-nor-aisyah') || credit.innerText.indexOf('SN Azlan') === -1) {
+            
+            // Rosakkan nama syarikat besar kat atas footer tu
+            if(h2Company) {
+                h2Company.innerText = "ERROR: ILLEGAL CODE ALTERATION";
+                h2Company.style.color = "red";
+            }
+            
+            // Hancurkan terus layout footer biar jadi senget-benget
+            document.querySelector('#footer .inner').style.display = 'none';
+        }
+    }, 1500);
+
 /* SERVICE IMAGE SLIDESHOW */
 		const serviceImages = [
 			"images/Perkhidmatan/Melaka_Front.jpg",
@@ -470,7 +489,7 @@ function resetForm() {
 }
 
 // ==========================================
-// 1. DATABASE STATIK (Array of Objects)
+// 1. DATABASE STATIC
 // ==========================================
 const branches = [
     {
@@ -478,7 +497,7 @@ const branches = [
         address: "No. 2, Kompleks Jitra, 06000 Jitra, Kedah",
         phone: "012-4663388",
         image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "https://www.tiktok.com/@hqarrahnuprihatin", 
+        map: "#", fb: "https://web.facebook.com/profile.php?id=61567661285155", ig: "#", tiktok: "https://www.tiktok.com/@hqarrahnuprihatin", 
         whatsapp: "https://wa.me/60124663388"
     },
     {
@@ -494,104 +513,104 @@ const branches = [
         address: "No. 13, Jalan Ibrahim, Taman Jitra Jaya, 06000 Jitra, Kedah",
         phone: "011-57851299",
         image: "images/Cawangan/Pandu Lalu Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "https://www.tiktok.com/@jitrajaya3", 
+        map: "#", fb: "https://web.facebook.com/ar.rahnu.prihatin.jitra.jaya", ig: "#", tiktok: "https://www.tiktok.com/@jitrajaya3", 
         whatsapp: "https://wa.me/601157851299"
     },
     {
         name: "Ar-Rahnu Prihatin Pandu Masuk@Jitra Caltex",
         address: "Stesen Minyak Caltex MAKISA PLT, Lot 574, Jalan Masjid, Pekan Jitra, 06000 Jitra, Kedah",
         phone: "010-6591199",
-        image: "images/Cawangan/Pandu Lalu Jitra.jpg",
-        map: "#", fb: "https://web.facebook.com/ar.rahnu.prihatin.jitra.jaya", ig: "#", tiktok: "https://www.tiktok.com/@jitrajaya3", 
+        image: "images/Cawangan/Jitra Caltex.jpg",
+        map: "#", fb: "https://web.facebook.com/profile.php?id=61577118754076", ig: "https://www.instagram.com/arrahnuprihatinjitracaltex/", tiktok: "https://www.tiktok.com/@arrahnu.prihatin1", 
         whatsapp: "https://wa.me/60106591199"
     },
     {
         name: "Ar-Rahnu Prihatin Alor Setar",
         address: "No. 49, Jalan Langgar, 05460 Alor Setar, Kedah",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "011-11151588",
+        image: "images/Cawangan/Alor Setar.jpg",
+        map: "#", fb: "https://web.facebook.com/profile.php?id=100013860002162", ig: "#", tiktok: "https://www.tiktok.com/@arrahnuprihatinalorsetar", 
+        whatsapp: "https://wa.me/601111151588"
     },
     {
         name: "Ar-Rahnu Prihatin Pandu Lalu Alor Setar",
         address: "No. 209G, Medan Putra, Seberang Jalan Putra, 05150 Alor Setar, Kedah",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "017-4575626",
+        image: "images/Cawangan/Pandu Lalu Alor Setar.png",
+        map: "#", fb: "https://web.facebook.com/profile.php?id=61588995356965", ig: "https://www.instagram.com/arrahnuprihatin_mp/", tiktok: "https://www.tiktok.com/@arrahnu.prihatin", 
+        whatsapp: "https://wa.me/60174575626"
     },
     {
         name: "Ar-Rahnu Prihatin Pokok Sena",
         address: "No. 213, Jalan Angsana 9, Taman Angsana, 06400 Pokok Sena, Kedah",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "012-5462599",
+        image: "images/Cawangan/Pokok Sena.jpg",
+        map: "#", fb: "https://web.facebook.com/pinjamgadai.pokoksena", ig: "#", tiktok: "#", 
+        whatsapp: "https://wa.me/60125462599"
     },
     {
         name: "Ar-Rahnu Prihatin Kuala Nerang",
         address: "No. 26, Kompleks Angsana, 06300 Kuala Nerang, Kedah",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "012-3745626",
+        image: "images/Cawangan/Kuala Nerang.png",
+        map: "#", fb: "https://web.facebook.com/guanteik.kualanerang", ig: "https://www.instagram.com/pinjamgadaikuala/", tiktok: "https://www.tiktok.com/@arrahnu.prihatin0", 
+        whatsapp: "https://wa.me/60123745626"
     },
     {
         name: "Ar-Rahnu Prihatin Pendang",
         address: "No. 102, Jalan Sukamari, Pekan Pendang Baru, 06700 Pendang, Kedah",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "012-4412599",
+        image: "images/Cawangan/Pendang.png",
+        map: "#", fb: "https://web.facebook.com/pinjamgadai.pendang", ig: "https://www.instagram.com/arrahnupendang/", tiktok: "https://www.tiktok.com/@ar.rahnu.prihatin", 
+        whatsapp: "https://wa.me/60124412599"
     },
     {
         name: "Ar-Rahnu Prihatin Gurun",
         address: "No. 9A, Jalan Jerai Maju, Taman Jerai Maju 2, 08300 Gurun, Kedah",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "012-5662599",
+        image: "images/Cawangan/Gurun.jpg",
+        map: "#", fb: "https://web.facebook.com/sgtc.gurun", ig: "#", tiktok: "https://www.tiktok.com/@prihatin.gurun.official1", 
+        whatsapp: "https://wa.me/60125662599"
     },
     {
         name: "Ar-Rahnu Prihatin Sungai Petani",
         address: "No. C-58, Jalan Permatang Gedong, Taman Sejati Indah, 08000 Sungai Petani, Kedah",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "012-6585626",
+        image: "images/Cawangan/Sg Petani.jpg",
+        map: "#", fb: "https://web.facebook.com/arrahnuprihatinsungaipetani", ig: "https://www.instagram.com/arrahnuprihatinsungaipetani/", tiktok: "https://www.tiktok.com/@arrahnuprihatinsgpetani", 
+        whatsapp: "https://wa.me/60126585626"
     },
     {
         name: "Ar-Rahnu Prihatin Kulim",
         address: "No. 159-F, Jalan Tunku Putra, 09000 Kulim, Kedah",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "012-5532599",
+        image: "images/Cawangan/Kulim.jpg",
+        map: "#", fb: "#", ig: "https://www.instagram.com/arrahnuprihatin_kulim/", tiktok: "https://www.tiktok.com/@arrahnuprihatinkulim", 
+        whatsapp: "https://wa.me/60125532599"
     },
     {
         name: "Ar-Rahnu Prihatin Langkawi",
         address: "No. 119, Persiaran Bunga Raya, Langkawi Mall, Kuah, 07000 Langkawi, Kedah",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "012-6935626",
+        image: "images/Cawangan/Langkawi.png",
+        map: "#", fb: "https://web.facebook.com/sriguanteik.langkawi", ig: "https://www.instagram.com/arrahnuprihatinlangkawi/", tiktok: "#", 
+        whatsapp: "https://wa.me/60126935626"
     },
     {
         name: "Ar-Rahnu Prihatin Pandu Lalu Changlun",
         address: "No. 8, Jalan Kodiang, Pekan Baru Changlun, 06010 Changlun, Kedah",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "012-4456299",
+        image: "images/Cawangan/Pandu Lalu Changlun.jpg",
+        map: "#", fb: "https://web.facebook.com/profile.php?id=61573082934800", ig: "#", tiktok: "https://www.tiktok.com/@arrahnuprihatinchanglun", 
+        whatsapp: "https://wa.me/60124456299"
     },
     {
         name: "Ar-Rahnu Prihatin Pandu Lalu Guar Cempedak",
         address: "No. 39, Kompleks Perniagaan Guar Utama, 08800 Guar Cempedak, Kedah",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "010-8311699",
+        image: "images/Cawangan/Guar Cempedak.jpg",
+        map: "#", fb: "https://web.facebook.com/profile.php?id=61582456090867", ig: "#", tiktok: "https://www.tiktok.com/@arrahnu.dtguarchempedak", 
+        whatsapp: "https://wa.me/60108311699"
     },
     {
         name: "Ar-Rahnu Prihatin Pandu Lalu Kota Sarang Semut",
