@@ -272,17 +272,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const faqItem = question.parentElement;
             const faqAnswer = question.nextElementSibling;
 
-            // Tutup soalan lain yang tengah terbuka (Optional - Single Open)
-            /*
-            document.querySelectorAll('.faq-item').forEach(item => {
-                if (item !== faqItem) {
-                    item.classList.remove('active');
-                    item.querySelector('.faq-answer').style.maxHeight = null;
-                }
-            });
-            */
-
-            // Toggle active class
             faqItem.classList.toggle('active');
 
             if (faqItem.classList.contains('active')) {
@@ -615,88 +604,88 @@ const branches = [
     {
         name: "Ar-Rahnu Prihatin Pandu Lalu Kota Sarang Semut",
         address: "No. 6, Jalan Usahawan 1, Dataran Usahawan, 06800 Kota Sarang Semut, Kedah",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "010-8457199",
+        image: "images/Cawangan/Kota Sarang Semut.jpg",
+        map: "#", fb: "https://web.facebook.com/arrahnukotasarang", ig: "#", tiktok: "https://www.tiktok.com/@pandulalu.kotasar", 
+        whatsapp: "https://wa.me/60108457199"
     },
     {
         name: "Ar-Rahnu Prihatin Pandu Lalu Kodiang",
         address: "No. 8A, Jalan Perlis, 06100 Kodiang, Kedah",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "010-8753155",
+        image: "images/Cawangan/Kodiang.jpg",
+        map: "#", fb: "https://web.facebook.com/profile.php?id=61574657567214", ig: "https://www.instagram.com/arrahnuprihatinko25_/", tiktok: "https://www.tiktok.com/@arrahnuprihatinkodiang", 
+        whatsapp: "https://wa.me/60108753155"
     },
     {
         name: "Ar-Rahnu Prihatin Kangar",
         address: "No. 52, Persiaran Jubli Emas, Jalan Kangar, 01000 Kangar, Perlis",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "012-5822599",
+        image: "images/Cawangan/Kangar.png",
+        map: "#", fb: "https://web.facebook.com/pinjamgadai.kangar", ig: "https://www.instagram.com/arrahnuprihatin_kangar/", tiktok: "https://www.tiktok.com/@arrahnuprihatin_kangar", 
+        whatsapp: "https://wa.me/60125822599"
     },
     {
         name: "Ar-Rahnu Prihatin Arau",
         address: "No. 1, Jalan Satu, Medan Pekan, 02600 Arau, Perlis",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "017-3295626",
+        image: "images/Cawangan/Arau.png",
+        map: "#", fb: "https://web.facebook.com/sriguanteik.perlis", ig: "#", tiktok: "#", 
+        whatsapp: "https://wa.me/60173295626"
     },
     {
         name: "Ar-Rahnu Prihatin Kuala Perlis",
         address: "No. 29, Jalan Besar, 02000 Kuala Perlis, Perlis",
         phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
+        image: "images/Cawangan/Kuala Perlis.png",
+        map: "#", fb: "https://web.facebook.com/pinjamgadai.kualaperlis", ig: "https://www.instagram.com/arrahnu.prihatin.kp/", tiktok: "https://www.tiktok.com/@arrahnu.prihatin.kp", 
         whatsapp: "https://wa.me/60194131199"
     },
     {
         name: "Ar-Rahnu Prihatin Pandu Lalu Kota Damansara",
         address: "No. 19, Jalan Camar 4/5A, Seksyen 4 Kota Damansara, 47810 Petaling Jaya, Selangor",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "014-3255199",
+        image: "images/Cawangan/Pandu Lalu Kota Damansara.jpg",
+        map: "#", fb: "https://web.facebook.com/profile.php?id=100079008327125", ig: "https://www.instagram.com/ar_rahnupandulalu/", tiktok: "https://www.tiktok.com/@arrahnuprihatinpandulalu", 
+        whatsapp: "https://wa.me/60143255199"
     },
     {
         name: "Ar-Rahnu Prihatin Pandu Lalu Rawang",
         address: "No. 59, Jalan Bandar Rawang 3, Pekan Rawang, 48000 Rawang, Selangor",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "010-2555725",
+        image: "images/Cawangan/Rawang.jpg",
+        map: "#", fb: "https://web.facebook.com/profile.php?id=61577399731152", ig: "#", tiktok: "https://www.tiktok.com/@arrahnu_rawang_drivethru", 
+        whatsapp: "https://wa.me/60102555725"
     },
     {
         name: "Ar-Rahnu Prihatin Pandu Lalu Butterworth",
         address: "No. 6759, Jalan Kampung Gajah, 12200 Butterworth, Pulau Pinang",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "010-5311916",
+        image: "images/Cawangan/Butterworth.jpg",
+        map: "#", fb: "https://web.facebook.com/profile.php?id=100073645711325", ig: "https://www.instagram.com/arrahnuprihatinbutterworth/", tiktok: "https://www.tiktok.com/@arrahnuprihatinbtworth", 
+        whatsapp: "https://wa.me/60105311916"
     },
     {
         name: "Ar-Rahnu Prihatin Pandu Lalu Pendang",
         address: "No. 18, Pendang Square, Jalan Pendang Square 2, 06700 Pendang, Kedah",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "012-8211299",
+        image: "images/Cawangan/Pandu Lalu Pendang.jpg",
+        map: "#", fb: "https://web.facebook.com/profile.php?id=61578358551476", ig: "#", tiktok: "https://www.tiktok.com/@arrahnu.pandulalupendang", 
+        whatsapp: "https://wa.me/60128211299"
     },
     {
         name: "Ar-Rahnu Prihatin Pandu Lalu Melaka",
         address: "No. 603, Jalan Melaka Raya 10, Taman Melaka Raya, 75000 Melaka",
-        phone: "019-4131199",
-        image: "images/Cawangan/Jitra.jpg",
-        map: "#", fb: "#", ig: "#", tiktok: "#", 
-        whatsapp: "https://wa.me/60194131199"
+        phone: "011-13390299",
+        image: "images/Cawangan/Melaka.jpg",
+        map: "#", fb: "https://web.facebook.com/arrahnuprihatinpandulalumelaka", ig: "https://www.instagram.com/ar_rahnupandulalumelaka/", tiktok: "https://www.tiktok.com/@arrahnuprihatin_melaka", 
+        whatsapp: "https://wa.me/601113390299"
     },
     {
         name: "Ar-Rahnu Prihatin Pandu Lalu Kangar",
         address: "No. 19, Jalan PKENPS 5, Kompleks Niaga PKENPS Kangar, 01000 Kangar, Perlis",
         phone: "012-6327799",
-        image: "images/Cawangan/Jitra.jpg",
+        image: "images/Cawangan/Pandu Lalu Kangar.png",
         map: "#", fb: "#", ig: "#", tiktok: "#", 
         whatsapp: "https://wa.me/60126327799"
     }
