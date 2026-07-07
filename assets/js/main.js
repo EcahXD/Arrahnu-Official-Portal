@@ -469,13 +469,14 @@ function resetForm() {
     document.getElementById('anggaran-harga').scrollIntoView({ behavior: 'smooth' });
 }
 
+// ==========================================
 // 1. DATABASE STATIK (Array of Objects)
-// Masukkan senarai cawangan di sini. Anda boleh tambah sebanyak mana yang anda mahu.
+// ==========================================
 const branches = [
     {
         name: "Ar-Rahnu Prihatin Jitra",
         address: "No. 2, Kompleks Jitra, 06000 Jitra, Kedah",
-        phone: "012-4663388", // Menggunakan nombor telefon rasmi lodger/syarikat
+        phone: "012-4663388",
         image: "images/Cawangan/Jitra.jpg",
         map: "#", fb: "#", ig: "#", tiktok: "https://www.tiktok.com/@hqarrahnuprihatin", 
         whatsapp: "https://wa.me/60124663388"
@@ -682,9 +683,15 @@ const branches = [
     }
 ];
 
-// 2. FUNGSI UNTUK LUKIS CARDS
+// ==========================================
+// 2. FUNGSI UNTUK LUKIS CARDS (HTML)
+// ==========================================
 function displayBranches(data) {
     const container = document.getElementById('branch-container');
+    
+    // Elak ralat kalau element 'branch-container' tak wujud di page ni
+    if (!container) return; 
+
     container.innerHTML = ""; // Bersihkan container dahulu
 
     if (data.length === 0) {
@@ -694,62 +701,94 @@ function displayBranches(data) {
 
     // Loop data dan bina HTML untuk setiap card
     data.forEach(branch => {
-        // Tukar bahagian cardHTML dalam fungsi displayBranches anda:
-const cardHTML = `
-    <article>
-        <div class="cawangan-top">
-            <div class="cawangan-image">
-                <img src="${branch.image}" alt="${branch.name}">
-            </div>
-            <div class="cawangan-text">
-                <h3>${branch.name}</h3>
-                <p>${branch.address}</p>
-                <p><strong>Tel:</strong> ${branch.phone}</p>
-            </div>
-        </div>
-        <hr class="cawangan-divider">
-        <div class="cawangan-icons">
-            <a href="javascript:void(0)" 
-            onclick="showOnMap('${branch.name}')" 
-            class="icon solid fa-map-marker-alt">
-            </a>
-            <a href="${branch.ig}" class="icon brands fa-instagram"></a>
-            <a href="${branch.tiktok}" class="icon brands fa-tiktok"></a>
-            <a href="${branch.whatsapp}" class="icon brands fa-whatsapp"></a>
-        </div>
-    </article>
-`;
-        // Inject masuk ke dalam container
+        const cardHTML = `
+            <article>
+                <div class="cawangan-top">
+                    <div class="cawangan-image">
+                        <img src="${branch.image}" alt="${branch.name}">
+                    </div>
+                    <div class="cawangan-text">
+                        <h3>${branch.name}</h3>
+                        <p>${branch.address}</p>
+                        <p><strong>Tel:</strong> ${branch.phone}</p>
+                    </div>
+                </div>
+                <hr class="cawangan-divider">
+                <div class="cawangan-icons">
+                    <a href="javascript:void(0)" 
+                    onclick="showOnMap('${branch.name}')" 
+                    class="icon solid fa-map-marker-alt">
+                    </a>
+                    <a href="${branch.ig}" class="icon brands fa-instagram"></a>
+                    <a href="${branch.tiktok}" class="icon brands fa-tiktok"></a>
+                    <a href="${branch.whatsapp}" class="icon brands fa-whatsapp"></a>
+                </div>
+            </article>
+        `;
         container.innerHTML += cardHTML;
     });
 }
 
-// Fungsi ini akan tukar lokasi peta berdasarkan nama cawangan yang diklik
+// ==========================================
+// 3. FUNGSI TAPISAN (FILTER) BERASASKAN NAMA/ALAMAT
+// ==========================================
+function filterBranches(keyword) {
+    if (!keyword) {
+        displayBranches(branches); // Kalau takde keyword, tunjuk semua
+        return;
+    }
+
+    const lowerCaseKeyword = keyword.toLowerCase();
+    
+    const filteredData = branches.filter(branch => {
+        return branch.name.toLowerCase().includes(lowerCaseKeyword) || 
+               branch.address.toLowerCase().includes(lowerCaseKeyword);
+    });
+
+    displayBranches(filteredData);
+}
+
+// ==========================================
+// 4. FUNGSI GOOGLE MAPS
+// ==========================================
 function showOnMap(branchName) {
     const iframe = document.getElementById('main-map');
+    if (!iframe) return;
     
-    // Tukar src iframe kepada lokasi cawangan yang dipilih
     const query = encodeURIComponent(branchName + ", Malaysia");
     iframe.src = `https://www.google.com/maps?q=${query}&output=embed`;
     
-    // Scroll ke atas dengan lancar supaya user nampak peta berubah
-    document.querySelector('.map-container').scrollIntoView({ behavior: 'smooth' });
+    const mapContainer = document.querySelector('.map-container');
+    if (mapContainer) {
+        mapContainer.scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
-// 3. FUNGSI LIVE SEARCH (Auto Filter)
-document.getElementById('search-input').addEventListener('input', function(e) {
-    const keyword = e.target.value.toLowerCase(); // Ambil apa yang user taip dan jadikan huruf kecil
+// ==========================================
+// 5. INISIALISASI (BILA PAGE SIAP LOAD)
+// ==========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
 
-    // Filter array branches jika nama atau alamat ada keyword tu
-    const filteredData = branches.filter(branch => {
-        return branch.name.toLowerCase().includes(keyword) || 
-               branch.address.toLowerCase().includes(keyword);
-    });
+    // A. Setup Live Search masa user taip
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            filterBranches(e.target.value);
+        });
+    }
 
-    // Lukis semula card berdasarkan data yang dah ditapis
-    displayBranches(filteredData);
+    // B. Semak URL kalau ada parameter '?search=...' dari footer
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchBranch = urlParams.get('search');
+
+    if (searchBranch) {
+        // Kalau user tekan link dari footer, isi terus kotak carian dan tapis
+        if (searchInput) {
+            searchInput.value = searchBranch;
+        }
+        filterBranches(searchBranch);
+    } else {
+        // Kalau buka page macam biasa, lukis semua data
+        displayBranches(branches);
+    }
 });
-
-// 4. LUKIS SEMUA DATA MASA PAGE MULA-MULA BUKA
-displayBranches(branches);
-
