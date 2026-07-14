@@ -170,15 +170,82 @@
 
 ---
 
-### [20/06/2026] - Perancangan Struktur & Pengumpulan Data Awal Cawangan Syarikat
-- **Aktiviti:** Melaksanakan fasa perancangan seni bina fail `contact.html` dan memulakan pengumpulan maklumat hubungan korporat[cite: 1].
-- **Tindakan:** Menetapkan asas struktur fail `contact.html` berpandukan kerangka reka letak statik aplikasi yang sedia ada[cite: 1]. Menjalankan proses pengumpulan data dalaman syarikat bagi mendapatkan nama perniagaan rasmi, alamat penuh, dan nombor telefon yang aktif bagi kumpulan pertama cawangan syarikat[cite: 1]. Merangka pelan reka letak UI berasaskan sistem grid untuk memaparkan senarai cawangan secara kemas pada skrin desktop dan mudah alih[cite: 1].
+### [20/06/2026] - Pengumpulan Data Awal & Informasi Cawangan Ar-Rahnu
+- **Aktiviti:** Mencari dan mengumpul maklumat perhubungan bagi cawangan-cawangan utama Ar-Rahnu.
+- **Tindakan:** Menjalankan proses pengumpulan data dalaman untuk mendapatkan nombor telefon rasmi, alamat lengkap, serta akaun media sosial (Facebook, Instagram, TikTok) bagi kumpulan cawangan yang pertama.
 
-### [21/06/2026] - Pengumpulan Data Media Sosial & Katalog Aset Cawangan Serantau
-- **Aktiviti:** Melanjutkan pengumpulan maklumat hubungan terperinci bagi baki cawangan serantau dan pengurusan direktori fail[cite: 1].
-- **Tindakan:** Mengumpul dan menyusun data pautan URL rasmi bagi peta navigasi digital cawangan serta pemegang media sosial korporat khusus (WhatsApp, Facebook, Instagram, TikTok) bagi setiap lokasi[cite: 1]. Mengurus dan mengkatalogkan semua aset teks maklumat serta imej pemegang tempat (*image placeholders*) cawangan ke dalam struktur direktori tempatan projek untuk memudahkan proses integrasi kod[cite: 1].
+---
 
-### [22/06/2026] - Pengekodan Struktur HTML Halaman Hubungi Kami & Elemen Carian Statik
-- **Aktiviti:** Memulakan pengekodan fail `contact.html` serta membina elemen komponen kontena paparan cawangan[cite: 1].
+### [21/06/2026] - Pengumpulan Aset Gambar & Media Sosial Cawangan Serantau
+- **Aktiviti:** Melengkapkan pencarian data cawangan serantau serta mengumpul aset visual kedai.
+- **Tindakan:** Menyambung pencarian maklumat bagi baki cawangan lain termasuk mengumpul gambar fizikal kedai. Menyusun semua maklumat media sosial dan gambar ke dalam direktori fail tempatan projek untuk memudahkan integrasi kod.
+
+### [22/06/2026] - Pengekodan Struktur Asas HTML Halaman `contact.html`
+- **Aktiviti:** Membina kerangka asas fail HTML bagi modul Hubungi Kami.
+- **Tindakan:** Membina fail `contact.html` menggunakan template Solid State serta menyelaraskan menu pengepala (*header*) dan kaki halaman (*footer*) agar selari dengan halaman web yang lain.
+
+### [23/06/2026] - Mereka Bentuk Sistem Reka Letak Kad CSS (Custom Card)
+- **Aktiviti:** Merancang dan memulakan pengekodan CSS khusus berbentuk kad untuk paparan cawangan.
+- **Tindakan:** Menulis kelas CSS baharu untuk komponen kad cawangan. Mengatur kedudukan placeholder bagi ruangan gambar, teks alamat, dan susunan ikon media sosial di dalam blok kad tersebut.
+
+### [24/06/2026] - Pembangunan Reka Letak Grid Responsif (Desktop & Tablet)
+- **Aktiviti:** Mengkonfigurasi aturan responsif grid bagi paparan skrin besar.
+- **Tindakan:** Menggunakan *CSS Media Queries* untuk menetapkan reka letak kad. Memastikan apabila halaman dibuka menggunakan peranti desktop atau tablet, sistem grid akan memaparkan kad cawangan dalam bentuk 2 baris/kolum secara selari.
+
+### [25/06/2026] - Pelarasan Responsif Mudah Alih & Penggayaan Estetik Kad
+- **Aktiviti:** Mengoptimumkan paparan kad untuk skrin telefon mudah alih dan menambah kesan visual khas.
+- **Tindakan:** Menetapkan aturan CSS supaya susunan grid bertukar kepada 1 kolum sahaja apabila dikesan oleh skrin telefon mudah alih. Menambahkan kesan khas *glitters* (kilauan animasi) pada kad serta menyusun kedudukan imej, alamat, dan ikon pintasan media sosial dengan kemas.
+
+---
+
+### [27/06/2026] - Pembinaan Rangka HTML Versi Dummy & Kemasukan Data Ujian
+- **Aktiviti:** Membina halaman versi dummy untuk menguji hasil reka bentuk kod CSS kad yang telah siap.
+- **Tindakan:** Memasukkan elemen kod dummy ke dalam fail HTML untuk melihat hasil susunan visual kad, kedudukan imej, penjajaran teks alamat, serta fungsi responsif skrin secara fizikal.
+
+### [28/06/2026] - Pengekodan Komponen Bar Carian HTML (Search Bar Input)
+- **Aktiviti:** Menambah komponen bar carian pada struktur fail HTML.
+- **Tindakan:** Mengekod elemen input carian (`<input type="text">`) di bahagian atas halaman `contact.html` sebagai persediaan untuk membina sistem penapisan cawangan.
+
+### [29/06/2026] - Integrasi Elemen Peta Terbenam (Embedded Map Framework)
+- **Aktiviti:** Menyediakan komponen peta interaktif ke dalam struktur reka letak halaman.
+- **Tindakan:** Memasukkan bingkai iframe bagi peta terbenam (*embedded map*). Mengatur logik asas di mana peta akan bersedia untuk memaparkan lokasi koordinat cawangan secara automatik apabila kad cawangan tersebut diklik oleh pengguna.
+
+### [30/06/2026] - Pembangunan Pangkalan Data Statik (Static Database Object) dalam JavaScript
+- **Aktiviti:** Membina struktur storan data tempatan di dalam fail JavaScript untuk menyokong fungsi carian.
+- **Tindakan:** Menginisialisasi fail `contact.js` dan mencipta pangkalan data statik berasaskan tatasusunan objek (*array of objects*). Memasukkan semua data tulen cawangan (nama, alamat, nombor telefon, pautan media sosial, dan nama fail imej) ke dalam objek tersebut.
+
+### [01/07/2026] - Pengekodan Skrip Carian Auto (Auto-Search Logic)
+- **Aktiviti:** Membangunkan skrip JavaScript bagi memproses fungsi carian masa nyata (*real-time*).
+- **Tindakan:** Menulis fungsi pengesan acara (*event listener*) pada bar carian supaya sistem secara automatik menapis dan memaparkan hasil kad cawangan sejurus selepas pengguna menaip aksara pada input carian.
+
+### [02/07/2026] - Perluasan Algoritma Carian Berasaskan Kata Kunci Global (Keywords All)
+- **Aktiviti:** Mengoptimumkan logik penapisan carian supaya menyokong carian kata kunci yang fleksibel.
+- **Tindakan:** Mengemas kini skrip JavaScript supaya carian tidak terhad kepada nama cawangan sahaja, malah sistem mampu mengesan dan mengeluarkan output cawangan yang tepat berdasarkan sebarang kata kunci yang dimasukkan sama ada nama, alamat, daerah, mahupun tempat.
+
+---
+
+### [04/07/2026] - Sesi Ujian Kefungsian Skrip Carian & Peta Interaktif
+- **Aktiviti:** Menjalankan pengujian fungsi logik JavaScript dan integrasi komponen peta.
+- **Tindakan:** Menguji keberkesanan fungsi carian auto untuk memastikan data ditapis dengan betul mengikut kata kunci. Memastikan logik interaksi peta berfungsi dengan tepat, di mana peta terbenam bertukar paparan lokasi dengan lancar setiap kali kad cawangan ditekan.
+
+### [05/07/2026] - Ujian Responsif Menyeluruh & Validasi Pautan Ikon Media Sosial
+- **Aktiviti:** Menjalankan ujian keserasian antara muka pada pelbagai resolusi skrin peranti.
+- **Tindakan:** Menguji paparan halaman melalui simulasi skrin telefon pintar dan tablet bagi memastikan susunan kad bertukar dengan betul (1 kolum atau 2 kolum). Memeriksa semua pautan ikon media sosial (WhatsApp, FB, IG, TikTok) bagi memastikan butang berfungsi mengarah ke URL cawangan yang betul.
+
+### [06/07/2026] - Pembersihan Kod Sumber & Pemuktamadan Modul Hubungi Kami
+- **Aktiviti:** Melakukan proses refaktor kod (*code refactoring*) dan menutup fasa pembangunan `contact.html`.
+- **Tindakan:** Menyemak semula keseluruhan baris kod HTML, CSS, dan JavaScript untuk membuang elemen dummy yang tidak digunakan serta mengemas kini ulasan kod. Memastikan keseluruhan halaman berfungsi dengan stabil sebelum menyerahkan modul Hubungi Kami kepada pihak pengurusan.
 - **Tindakan:** Menulis kod HTML bagi halaman `contact.html` dan menyelaraskan struktur navigasi menu pengepala agar konsisten dengan modul web lain[cite: 1]. Membangunkan elemen input fungsi carian statik khas di bahagian atas halaman sebagai persediaan untuk ruang penapisan data sisi klien di masa hadapan[cite: 1]. Menstrukturkan bahagian kontena induk (*parent container*) susun atur menggunakan elemen semantik bagi menempatkan komponen maklumat cawangan syarikat[cite: 1].
+
+### [07/07/2026] - Pembangunan Komponen Kad Pintasan E-mel Kerjaya pada Halaman `about.html`
+- **Aktiviti:** Menambah komponen interaktif baharu pada fail `about.html` bagi pengurusan permohonan kerjaya.
+- **Tindakan:** Membina sebuah kad visual khas pada modul Mengenai Kami yang dilengkapi dengan teks penerangan peluang pekerjaan serta sebuah butang tindakan (*call-to-action*). Mengkonfigurasi fungsi butang tersebut menggunakan protokol `mailto:` yang dihalakan secara automatik ke bahagian kerjaya (*career*). Ini membolehkan calon pekerja atau sesiapa yang ingin memohon jawatan mengklik butang tersebut untuk menghantar resume terus melalui aplikasi e-mel mereka.
+
+### [08/07/2026] - Pembangunan Komponen Kad E-mel Kolaborasi pada Halaman `contact.html`
+- **Aktiviti:** Membina komponen kad perhubungan perniagaan baharu pada fail `contact.html`.
+- **Tindakan:** Menyisipkan satu komponen kad interaktif pada fail `contact.html` yang mengandungi teks ajakan dan butang khas untuk tujuan jalinan kerjasama. Mengintegrasikan fungsi butang menggunakan logik `mailto:` yang dihalakan terus ke bahagian kolaborasi (*collab*). Reka bentuk ini dibina bagi membolehkan mana-mana pihak luar atau agensi yang berminat untuk mengadakan kolaborasi perniagaan menghantar e-mel rasmi dengan sekali klik sahaja.
+
+### [09/07/2026] - Kemas Kini Repositori GitHub, Dokumentasi Akhir & Penyerahan Projek Tamat Latihan Industri
+- **Aktiviti:** Memuat naik kod akhir tapak web, mengemas kini dokumentasi repositori, dan melakukan proses penyerahan projek kepada pihak pengurusan.
+- **Tindakan:** Memuat naik (*push*) keseluruhan fail HTML, CSS, dan JavaScript yang telah dikemas kini ke repositori GitHub syarikat serta memuktamadkan fail dokumentasi berkaitan. Menyerahkan hasil kerja akhir tapak web kepada CEO untuk fasa pelancaran memandangkan pihak syarikat telah mempunyai nama domain sendiri dan hanya perlu memasukkan fail ke domain tersebut. Mengambil maklum bahawa pasukan IT dalaman syarikat akan melakukan beberapa pelarasan kecil (*minor tweaks*) pada masa hadapan sebelum pelancaran rasmi dilakukan, sekali gus menandakan berakhirnya tempoh latihan industri dengan jayanya.
 
